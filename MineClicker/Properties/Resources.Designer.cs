@@ -61,6 +61,24 @@ namespace MineClicker.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Accept.
+        /// </summary>
+        public static string Accept_Buttom {
+            get {
+                return ResourceManager.GetString("Accept_Buttom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cancel.
+        /// </summary>
+        public static string Cancel_Buttom {
+            get {
+                return ResourceManager.GetString("Cancel_Buttom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Email.
         /// </summary>
         public static string EmailLogin {
@@ -75,6 +93,15 @@ namespace MineClicker.Properties {
         public static string FirstName {
             get {
                 return ResourceManager.GetString("FirstName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Help.
+        /// </summary>
+        public static string Help_Buttom {
+            get {
+                return ResourceManager.GetString("Help_Buttom", resourceCulture);
             }
         }
         

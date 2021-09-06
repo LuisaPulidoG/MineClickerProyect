@@ -118,33 +118,33 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Accept_Buttom" xml:space="preserve">
-    <value>Accept</value>
+    <value>受け入れる</value>
   </data>
   <data name="Cancel_Buttom" xml:space="preserve">
-    <value>Cancel</value>
+    <value>キャンセル</value>
   </data>
   <data name="EmailLogin" xml:space="preserve">
-    <value>Email</value>
+    <value>Eメール</value>
   </data>
   <data name="FirstName" xml:space="preserve">
-    <value>First Name</value>
+    <value>ファーストネーム</value>
   </data>
   <data name="Help_Buttom" xml:space="preserve">
-    <value>Help</value>
+    <value>ヘルプ</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>Name</value>
+    <value>名前</value>
   </data>
   <data name="Nickname" xml:space="preserve">
-    <value>Nickname</value>
+    <value>ニックネーム</value>
   </data>
   <data name="PasswordLogin" xml:space="preserve">
-    <value>Password</value>
+    <value>パスワード</value>
   </data>
   <data name="SecondName" xml:space="preserve">
-    <value>Second Name</value>
+    <value>ミドルネーム</value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>User Register</value>
+    <value>ユーザー登録</value>
   </data>
 </root>
