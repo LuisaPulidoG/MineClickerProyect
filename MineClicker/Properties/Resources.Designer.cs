@@ -22,7 +22,7 @@ namespace MineClicker.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace MineClicker.Properties {
         ///   Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MineClicker.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace MineClicker.Properties {
         ///   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace MineClicker.Properties {
         /// <summary>
         ///   Busca una cadena traducida similar a Email.
         /// </summary>
-        internal static string EmailLogin {
+        public static string EmailLogin {
             get {
                 return ResourceManager.GetString("EmailLogin", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace MineClicker.Properties {
         /// <summary>
         ///   Busca una cadena traducida similar a First Name.
         /// </summary>
-        internal static string FirstName {
+        public static string FirstName {
             get {
                 return ResourceManager.GetString("FirstName", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace MineClicker.Properties {
         /// <summary>
         ///   Busca una cadena traducida similar a Name.
         /// </summary>
-        internal static string Name {
+        public static string Name {
             get {
                 return ResourceManager.GetString("Name", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace MineClicker.Properties {
         /// <summary>
         ///   Busca una cadena traducida similar a Nickname.
         /// </summary>
-        internal static string Nickname {
+        public static string Nickname {
             get {
                 return ResourceManager.GetString("Nickname", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace MineClicker.Properties {
         /// <summary>
         ///   Busca una cadena traducida similar a Password.
         /// </summary>
-        internal static string PasswordLogin {
+        public static string PasswordLogin {
             get {
                 return ResourceManager.GetString("PasswordLogin", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace MineClicker.Properties {
         /// <summary>
         ///   Busca una cadena traducida similar a Second Name.
         /// </summary>
-        internal static string SecondName {
+        public static string SecondName {
             get {
                 return ResourceManager.GetString("SecondName", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace MineClicker.Properties {
         /// <summary>
         ///   Busca una cadena traducida similar a User Register.
         /// </summary>
-        internal static string Title {
+        public static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
             }
