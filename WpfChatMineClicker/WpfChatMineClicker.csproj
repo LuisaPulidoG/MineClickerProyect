@@ -55,8 +55,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="InicioSesion.xaml.cs">
-      <DependentUpon>InicioSesion.xaml</DependentUpon>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="Chat.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -70,7 +70,7 @@
       <DependentUpon>Chat.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="InicioSesion.xaml">
+    <Page Include="MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -124,6 +124,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Source Image\TitleMD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Fondo_Sesion_MineClicker.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

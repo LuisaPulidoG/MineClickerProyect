@@ -18,11 +18,11 @@ namespace WpfChatMineClicker
     /// <summary>
     /// Lógica de interacción para MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Chat : Window
     {
-        public MainWindow()
+        public Chat ()
         {
-            InitializeComponent();
+       
         }
     }
 }

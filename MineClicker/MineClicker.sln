@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MineClickerregistoUsuario", "MineClickerregistoUsuario.csproj", "{C58B9B9B-4A1B-4A3A-A4EB-4BABED96CD42}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFinterface", "WPFinterface.csproj", "{C58B9B9B-4A1B-4A3A-A4EB-4BABED96CD42}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfChatMineClicker", "..\WpfChatMineClicker\WpfChatMineClicker.csproj", "{D09D514C-EDC3-45CF-8703-58DB5B60C4CF}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFChatMineClicker", "..\WCFChatMineClicker\WCFChatMineClicker.csproj", "{BF069BAB-943A-4982-946E-77C4E907E723}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFConection", "..\WCFChatMineClicker\WCFConection.csproj", "{BF069BAB-943A-4982-946E-77C4E907E723}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +17,6 @@ Global
 		{C58B9B9B-4A1B-4A3A-A4EB-4BABED96CD42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C58B9B9B-4A1B-4A3A-A4EB-4BABED96CD42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C58B9B9B-4A1B-4A3A-A4EB-4BABED96CD42}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D09D514C-EDC3-45CF-8703-58DB5B60C4CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D09D514C-EDC3-45CF-8703-58DB5B60C4CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D09D514C-EDC3-45CF-8703-58DB5B60C4CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D09D514C-EDC3-45CF-8703-58DB5B60C4CF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BF069BAB-943A-4982-946E-77C4E907E723}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BF069BAB-943A-4982-946E-77C4E907E723}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF069BAB-943A-4982-946E-77C4E907E723}.Release|Any CPU.ActiveCfg = Release|Any CPU
