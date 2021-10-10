@@ -149,5 +149,14 @@ namespace MineClicker.Properties {
                 return ResourceManager.GetString("Title", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Login.
+        /// </summary>
+        public static string Title_login {
+            get {
+                return ResourceManager.GetString("Title_login", resourceCulture);
+            }
+        }
     }
 }

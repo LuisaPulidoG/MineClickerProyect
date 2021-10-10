@@ -1,0 +1,11 @@
+E:\Proyectos Visual Studio\repos\MineClickerTecno\ChatServer\bin\Debug\ChatServer.exe
+E:\Proyectos Visual Studio\repos\MineClickerTecno\ChatServer\bin\Debug\Chat_WCF.dll
+E:\Proyectos Visual Studio\repos\MineClickerTecno\ChatServer\bin\Debug\ChatServer.exe.config
+E:\Proyectos Visual Studio\repos\MineClickerTecno\ChatServer\bin\Debug\ChatServer.pdb
+E:\Proyectos Visual Studio\repos\MineClickerTecno\ChatServer\bin\Debug\Chat_WCF.pdb
+E:\Proyectos Visual Studio\repos\MineClickerTecno\ChatServer\bin\Debug\Chat_WCF.dll.config
+E:\Proyectos Visual Studio\repos\MineClickerTecno\ChatServer\obj\Debug\ChatServer.csproj.AssemblyReference.cache
+E:\Proyectos Visual Studio\repos\MineClickerTecno\ChatServer\obj\Debug\ChatServer.csproj.CoreCompileInputs.cache
+E:\Proyectos Visual Studio\repos\MineClickerTecno\ChatServer\obj\Debug\ChatServer.csproj.CopyComplete
+E:\Proyectos Visual Studio\repos\MineClickerTecno\ChatServer\obj\Debug\ChatServer.exe
+E:\Proyectos Visual Studio\repos\MineClickerTecno\ChatServer\obj\Debug\ChatServer.pdb
