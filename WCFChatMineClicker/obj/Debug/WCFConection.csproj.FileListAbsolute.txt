@@ -1,7 +1,0 @@
-E:\Proyectos Visual Studio\repos\MineClickerTecno\WCFChatMineClicker\bin\Debug\WCFChatMineClicker.dll.config
-E:\Proyectos Visual Studio\repos\MineClickerTecno\WCFChatMineClicker\bin\Debug\WCFChatMineClicker.dll
-E:\Proyectos Visual Studio\repos\MineClickerTecno\WCFChatMineClicker\bin\Debug\WCFChatMineClicker.pdb
-E:\Proyectos Visual Studio\repos\MineClickerTecno\WCFChatMineClicker\obj\Debug\WCFConection.csproj.AssemblyReference.cache
-E:\Proyectos Visual Studio\repos\MineClickerTecno\WCFChatMineClicker\obj\Debug\WCFConection.csproj.CoreCompileInputs.cache
-E:\Proyectos Visual Studio\repos\MineClickerTecno\WCFChatMineClicker\obj\Debug\WCFChatMineClicker.dll
-E:\Proyectos Visual Studio\repos\MineClickerTecno\WCFChatMineClicker\obj\Debug\WCFChatMineClicker.pdb
