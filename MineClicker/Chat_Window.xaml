@@ -5,35 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MineClicker"
         mc:Ignorable="d"
-        Title="Chat window" Height="470" Width="851">
-    <Grid Margin="0,0,2,2">
+        Title="Chat window" Height="498.5" Width="881">
+    <Grid Margin="0,0,2,-2">
         <StackPanel HorizontalAlignment="Stretch" Margin="1,0,530,0">
             <StackPanel.Background>
-                <ImageBrush ImageSource="696.jpg"/>
+                <ImageBrush ImageSource="Inicio_JuegoFondo.jpg" Stretch="UniformToFill"/>
             </StackPanel.Background>
         </StackPanel>
-        <TextBox HorizontalAlignment="Stretch" Height="30" Margin="10,23,584,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Background="#22FFFFFF" FontSize="20" Foreground="Black" BorderBrush="{x:Null}" TextChanged="Buscar_Box"/>
-        <Button Content="" HorizontalAlignment="Stretch" Margin="271,23,540,0" VerticalAlignment="Top" Height="30" BorderBrush="{x:Null}" Click="Buscar_buttom" RenderTransformOrigin="0.8,0.533">
+        <TextBox x:Name="BuscarBox" HorizontalAlignment="Stretch" Height="30" Margin="10,23,574,0" TextWrapping="Wrap" Text="Buscar" VerticalAlignment="Top" Background="#22FFFFFF" FontSize="20" Foreground="Black" BorderBrush="{x:Null}" SnapsToDevicePixels="True" />
+        <Button Content="" HorizontalAlignment="Stretch" Margin="302,23,540,0" VerticalAlignment="Top" Height="30" BorderBrush="{x:Null}" Click="Buscar_buttom" RenderTransformOrigin="0.8,0.533">
             <Button.Background>
                 <ImageBrush ImageSource="Lupa_Busquedas_png.png"/>
             </Button.Background>
         </Button>
-        <ListView x:Name="Listavista" HorizontalAlignment="Stretch" Margin="10,58,540,50" Background="{x:Null}">
-            <ListViewItem x:Name="Listitemcontact" HorizontalAlignment="Stretch">
-                <Grid HorizontalAlignment="Center" Margin="5">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="50"/>
-                        <ColumnDefinition Width="138"/>
-                        <ColumnDefinition Width="50"/>
-                    </Grid.ColumnDefinitions>
-
-                    <Border Width="40" Height="40" CornerRadius="25" BorderBrush="White" BorderThickness="0.6"/>
-                </Grid>
-            </ListViewItem>
-        </ListView>
-        <Button Content="Enviar" HorizontalAlignment="Stretch" Margin="740,400,20,0" Height="28" FontWeight="Bold" Foreground="Black" RenderTransformOrigin="0.892,0.244" HorizontalContentAlignment="Center" Grid.IsSharedSizeScope="True" Padding="6,1,1,1" ScrollViewer.CanContentScroll="True" Click="Enviar_Button" BorderThickness="2" Background="{x:Null}" VerticalAlignment="Top" FontStyle="Italic" VerticalContentAlignment="Center" FlowDirection="RightToLeft"/>
-        <TextBox x:Name="TextIntput" HorizontalAlignment="Stretch" Height="28" Margin="324,400,119,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" BorderBrush="#FF473535" TextChanged="Escribir_Chat" RenderTransformOrigin="0.5,0.5"/>
-        <Button Content="Chat Global" HorizontalAlignment="Stretch" Margin="10,393,713,10" VerticalAlignment="Stretch" BorderBrush="#FFACACAC" FontWeight="Bold" Click="Button_Click" FontSize="16">
+        <Button Content="Enviar" HorizontalAlignment="Stretch" Margin="786,412,3,0" Height="28" FontWeight="Bold" Foreground="Black" RenderTransformOrigin="0.892,0.244" HorizontalContentAlignment="Center" Grid.IsSharedSizeScope="True" Padding="6,1,1,1" ScrollViewer.CanContentScroll="True" Click="Enviar_Button" BorderThickness="2" Background="{x:Null}" VerticalAlignment="Top" FontStyle="Italic" VerticalContentAlignment="Center" FlowDirection="RightToLeft"/>
+        <TextBox x:Name="TextBoxMensaje" HorizontalAlignment="Stretch" Height="28" Margin="364,412,97,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" BorderBrush="#FF473535" TextChanged="Escribir_Chat" RenderTransformOrigin="0.5,0.5"/>
+        <Button Content="Chat Global" HorizontalAlignment="Stretch" Margin="212,407,540,25" VerticalAlignment="Stretch" BorderBrush="#FFACACAC" FontWeight="Bold" Click="Chat_Global" FontSize="16" Foreground="White">
             <Button.Background>
                 <ImageBrush ImageSource="EAlBPKZWwAAiSj7_thumbnail.png" Stretch="Uniform">
                     <ImageBrush.RelativeTransform>
@@ -47,8 +34,16 @@
                 </ImageBrush>
             </Button.Background>
         </Button>
-        <TextBox x:Name="TextDisplay" HorizontalAlignment="Left" Height="369" Margin="324,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="398" FontStyle="Italic" TextOptions.TextFormattingMode="Display" ScrollViewer.CanContentScroll="True" HorizontalScrollBarVisibility="Visible" IsReadOnly="True" IsUndoEnabled="True" IsReadOnlyCaretVisible="True"/>
-        <TextBox HorizontalAlignment="Left" Height="17" TextWrapping="Wrap" VerticalAlignment="Top" Width="69" Margin="10,3,0,0" Name="statuslabel" IsReadOnly="True"/>
-        <TextBox x:Name="NameUser" HorizontalAlignment="Left" Height="23" Margin="730,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="101" IsReadOnly="True" FontFamily="Segoe UI Black"/>
+        <TextBox x:Name="TextBoxListaMensajes" HorizontalAlignment="Left" Height="370" Margin="364,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="410" FontStyle="Italic" TextOptions.TextFormattingMode="Display" ScrollViewer.CanContentScroll="True" HorizontalScrollBarVisibility="Visible" IsReadOnly="True" IsUndoEnabled="True" IsReadOnlyCaretVisible="True"/>
+        <TextBox  HorizontalAlignment="Left" Height="17" TextWrapping="Wrap" VerticalAlignment="Top" Width="69" Margin="10,3,0,0" Name="statuslabel" IsReadOnly="True"  />
+        <TextBox x:Name="NameUser" HorizontalAlignment="Left" Height="20" Margin="799,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" IsReadOnly="True" FontFamily="Segoe UI Black"/>
+        <ListView x:Name="ListContactsView" HorizontalAlignment="Left" Height="329" Margin="10,59,0,0" VerticalAlignment="Top" Width="321"  Background="{x:Null}" IsSynchronizedWithCurrentItem="False" FontSize="18" BorderThickness="3" ClipToBounds="True">
+
+
+
+        </ListView>
+        <Button x:Name="RegresarJuego" Content="Regresar" HorizontalAlignment="Left" Height="34" Margin="10,409,0,0" VerticalAlignment="Top" Width="117" Background="{x:Null}" FontWeight="Bold" FontSize="16" Click="RegresarJuego_Click" Foreground="White"/>
+
+
     </Grid>
 </Window>

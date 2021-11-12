@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("ealbpkzwwaaisj7_thumbnail.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("iniciojuegotexture.jfif")]
 
 

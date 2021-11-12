@@ -1,7 +1,6 @@
 E:\Proyectos Visual Studio\repos\MineClickerTecno\Chat_WCF\bin\Debug\Chat_WCF.dll.config
 E:\Proyectos Visual Studio\repos\MineClickerTecno\Chat_WCF\bin\Debug\Chat_WCF.dll
 E:\Proyectos Visual Studio\repos\MineClickerTecno\Chat_WCF\bin\Debug\Chat_WCF.pdb
-E:\Proyectos Visual Studio\repos\MineClickerTecno\Chat_WCF\obj\Debug\Chat_WCF.csproj.AssemblyReference.cache
 E:\Proyectos Visual Studio\repos\MineClickerTecno\Chat_WCF\obj\Debug\Chat_WCF.csproj.CoreCompileInputs.cache
 E:\Proyectos Visual Studio\repos\MineClickerTecno\Chat_WCF\obj\Debug\Chat_WCF.dll
 E:\Proyectos Visual Studio\repos\MineClickerTecno\Chat_WCF\obj\Debug\Chat_WCF.pdb

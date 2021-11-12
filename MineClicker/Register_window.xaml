@@ -6,6 +6,9 @@
     Title ="{x:Static p:Resources.Title}" Height = "476.22" Width = "707.171">
 
     <Grid Margin="0,0,2,2">
+        <Grid.Background>
+            <ImageBrush ImageSource="Inicio_JuegoFondo.jpg"/>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="475*"/>
             <ColumnDefinition Width="222*"/>
@@ -25,14 +28,14 @@
         <Button Click="Accept_Buttom" Content="{x:Static p:Resources.Accept_Buttom}" HorizontalAlignment="Left" Margin="191,383,0,0" VerticalAlignment="Top" Width="75" />
         <Button Content="{x:Static p:Resources.Cancel_Buttom}" HorizontalAlignment="Left" Margin="314,383,0,0" VerticalAlignment="Top" Width="75"/>
         <Button Content="{x:Static p:Resources.Help_Buttom}" HorizontalAlignment="Left" Margin="446,383,0,0" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2"/>
-        <Label Content="{x:Static p:Resources.FirstName}"  HorizontalAlignment="Left" Margin="140,172,0,0" VerticalAlignment="Top"/>
-        <Label Content="{x:Static p:Resources.Name}" HorizontalAlignment="Left" Margin="156,90,0,0" VerticalAlignment="Top"/>
-        <Label Content="{x:Static p:Resources.EmailLogin}"  HorizontalAlignment="Left" Margin="36,172,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <Label Content="{x:Static p:Resources.PasswordLogin }"  HorizontalAlignment="Left" Margin="26,253,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <Label Content="{x:Static p:Resources.SecondName }"  HorizontalAlignment="Left" Margin="131,253,0,0" VerticalAlignment="Top" Width="95"/>
-        <Label Content="{x:Static p:Resources.Nickname}"  HorizontalAlignment="Left" Margin="23,90,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label Content="{x:Static p:Resources.FirstName}"  HorizontalAlignment="Left" Margin="145,172,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="{x:Static p:Resources.Name}" HorizontalAlignment="Left" Margin="156,90,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="{x:Static p:Resources.EmailLogin}"  HorizontalAlignment="Left" Margin="26,172,0,0" VerticalAlignment="Top" Grid.Column="1" Foreground="White"/>
+        <Label Content="{x:Static p:Resources.PasswordLogin }"  HorizontalAlignment="Left" Margin="10,253,0,0" VerticalAlignment="Top" Grid.Column="1" Foreground="White"/>
+        <Label Content="{x:Static p:Resources.SecondName }"  HorizontalAlignment="Left" Margin="145,253,0,0" VerticalAlignment="Top" Width="78" Foreground="White"/>
+        <Label Content="{x:Static p:Resources.Nickname}"  HorizontalAlignment="Left" Margin="23,90,0,0" VerticalAlignment="Top" Grid.Column="1" Foreground="White"/>
         <Image HorizontalAlignment="Left" Height="61" Margin="181,10,0,0" VerticalAlignment="Top" Width="331" Grid.ColumnSpan="2" Source="TitleMD.png"/>
 
-        
+
     </Grid>
 </Window>

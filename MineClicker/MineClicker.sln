@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chat_WCF", "..\Chat_WCF\Cha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatServer", "..\ChatServer\ChatServer.csproj", "{07BAA620-57BC-40F3-919B-7F7B4FA5B3FC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatosClicker", "..\DatosClicker\DatosClicker.csproj", "{958BE9D2-E38B-4861-B199-1F750A7D2DAD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{07BAA620-57BC-40F3-919B-7F7B4FA5B3FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07BAA620-57BC-40F3-919B-7F7B4FA5B3FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07BAA620-57BC-40F3-919B-7F7B4FA5B3FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{958BE9D2-E38B-4861-B199-1F750A7D2DAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{958BE9D2-E38B-4861-B199-1F750A7D2DAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{958BE9D2-E38B-4861-B199-1F750A7D2DAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{958BE9D2-E38B-4861-B199-1F750A7D2DAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

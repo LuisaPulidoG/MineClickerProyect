@@ -23,11 +23,14 @@ namespace Chat_WCF
         [OperationContract]
         void RemoverUser(ChatUser user);
 
+        List<ChatUser> GetAllUsercontacts(ChatUser user);
+
     }
     [DataContract]
     public class ChatUser
     {
         private string userName, ipAddress, hostName, password;
+        private List<ChatUser> UserContacts=new List<ChatUser>();
 
         [DataMember]
         public string UserName { get => userName; set => userName = value; }
@@ -37,6 +40,7 @@ namespace Chat_WCF
         public string HostName { get => hostName; set => hostName = value; }
         [DataMember]
         public string Password { get => password; set => password = value; }
+        public List<ChatUser> UserContacts1 { get => UserContacts; set => UserContacts = value; }
 
         public override string ToString()
         {

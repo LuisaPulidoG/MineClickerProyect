@@ -22,7 +22,10 @@ namespace Chat_WCF
             return mainEngine.ConnectedUsers;
             
         }
-
+        public List<ChatUser> GetAllUsercontacts(ChatUser user)
+        {
+            return mainEngine.getcontactsUser(user);
+        }
         public List<ChatMenssage> GetChatMenssages(ChatUser user)
         {
             return mainEngine.GetNewMessages(user);

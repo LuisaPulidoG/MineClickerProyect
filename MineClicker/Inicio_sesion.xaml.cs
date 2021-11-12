@@ -11,8 +11,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using System.Windows;
-using System.Windows.Controls;
 using System.ServiceModel;
 using Chat_WCF;
 namespace MineClicker
@@ -22,52 +20,67 @@ namespace MineClicker
     /// </summary>
     public partial class Inicio_sesion : Window
     {
+
         public Inicio_sesion()
         {
-            
+
             InitializeComponent();
+        
             
         }
         private ChannelFactory<IChatService> remoteFactory;
         public IChatService remoteProxy;
         private ChatUser clientUser;
-        private bool isConnected = false;
+        //private bool isConnected = false;
+
         public string Username { get; set; }
         public string Userpassword { get; set; }
-
         public char PasswordChar { get; set; }
+
 
         private void Cancel_buttom(object sender, RoutedEventArgs e)
         {
             this.Username = String.Empty;
             this.Userpassword = String.Empty;
             this.Close();
+              
         }
+  
         private void Login_buttom(object sender, RoutedEventArgs e)
         {
-            if (!String.IsNullOrEmpty(nickname.Text))
+            if (!String.IsNullOrEmpty(nickname.Text) && !String.IsNullOrEmpty(password.Password))
             {
                 this.Username = nickname.Text;
-                this.Userpassword = password.Text;
-
-                Chat_window chatwindowcreate = new Chat_window();
+                this.Userpassword = password.Password;
+                InicioJuego newinicojuego = new InicioJuego();
+                newinicojuego.Username = nickname.Text;
+                newinicojuego.Userpassword = password.Password;
+                this.Close();
+                newinicojuego.ShowDialog();
+                
+               /* Chat_window chatwindowcreate = new Chat_window();
                 chatwindowcreate.statuslabel.Text = "conected";
                 chatwindowcreate.NameUser.Text=Username;
 
-                remoteFactory = new ChannelFactory<IChatService>("ChatConfig");
+               remoteFactory = new ChannelFactory<IChatService>("ChatConfig");
                 remoteProxy = remoteFactory.CreateChannel();
                 clientUser = remoteProxy.ClientConnect(Username, Userpassword);
+
+                chatwindowcreate.remoteFactory = this.remoteFactory;
+                chatwindowcreate.remoteProxy = this.remoteProxy;
+                chatwindowcreate.clientuser = this.clientUser;
 
                 if (clientUser != null)
                 {
                     //usersTimer.Enabled = true;
                     //messagesTimer.Enabled = true;
-                    isConnected = true;
+                   // isConnected = true;
                 }
+               
                 this.Close();
-                chatwindowcreate.ShowDialog();
+                chatwindowcreate.ShowDialog();*/
 
-                //
+                
                 
             }
             else

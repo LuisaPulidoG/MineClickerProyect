@@ -12,6 +12,7 @@ namespace Chat_WCF
 
         private Dictionary<string, List<ChatMenssage>> incomingMessenge = new Dictionary<string, List<ChatMenssage>>();
 
+        private ChatUser userContact;
    
         public List<ChatUser> ConnectedUsers { get => connectedUsers; set => connectedUsers = value; }
 
@@ -65,7 +66,16 @@ namespace Chat_WCF
                 return null;
 
         }
+        public List<ChatUser> getcontactsUser(ChatUser user)
+        {
+            List<ChatUser> myContactsUser = user.UserContacts1;
+            incomingMessenge[user.UserName] = new List<ChatMenssage>();
 
+            if (myContactsUser.Count > 0)
+                return myContactsUser;
+            else
+                return null;
+        }
         public void RemoveUser(ChatUser user)
         {
             this.connectedUsers.RemoveAll(useraux => useraux.UserName == user.UserName);

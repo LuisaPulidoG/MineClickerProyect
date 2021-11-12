@@ -4,6 +4,5 @@
              xmlns:local="clr-namespace:MineClicker"
              StartupUri="Inicio_sesion.xaml">
     <Application.Resources>
-         
     </Application.Resources>
 </Application>
