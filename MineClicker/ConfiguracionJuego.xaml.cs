@@ -26,7 +26,7 @@ namespace MineClicker
 
         private void BotonRegresar(object sender, RoutedEventArgs e)
         {
-            InicioJuego newinicioJuego = new InicioJuego();
+            PantallaPrincipal newinicioJuego = new PantallaPrincipal();
             this.Close();
             newinicioJuego.ShowDialog();
         }

@@ -1,0 +1,7 @@
+E:\Proyectos Visual Studio\repos\MineClickerTecno\DatosClicker\bin\Debug\DatosClicker.exe.config
+E:\Proyectos Visual Studio\repos\MineClickerTecno\DatosClicker\bin\Debug\DatosClicker.exe
+E:\Proyectos Visual Studio\repos\MineClickerTecno\DatosClicker\bin\Debug\DatosClicker.pdb
+E:\Proyectos Visual Studio\repos\MineClickerTecno\DatosClicker\obj\Debug\DatosClicker.csproj.AssemblyReference.cache
+E:\Proyectos Visual Studio\repos\MineClickerTecno\DatosClicker\obj\Debug\DatosClicker.csproj.CoreCompileInputs.cache
+E:\Proyectos Visual Studio\repos\MineClickerTecno\DatosClicker\obj\Debug\DatosClicker.exe
+E:\Proyectos Visual Studio\repos\MineClickerTecno\DatosClicker\obj\Debug\DatosClicker.pdb

@@ -6,45 +6,45 @@
         xmlns:local="clr-namespace:MineClicker"
         mc:Ignorable="d"
         Title="TiendaPicos" Height="494.872" Width="865.385">
-    <Grid Margin="0,0,0,-2">
+    <Grid Margin="0,0,0,-2" OpacityMask="{x:Null}">
         <Grid.Background>
-            <ImageBrush ImageSource="Inicio_JuegoFondo.jpg"/>
+            <ImageBrush ImageSource="Sourse_Imagen/TexturaFondoJuego.jpg"/>
         </Grid.Background>
         <ListBox HorizontalAlignment="Left" Height="431" Margin="368,10,0,0" VerticalAlignment="Top" Width="479" Background="{x:Null}" BorderBrush="{x:Null}" ScrollViewer.CanContentScroll="False">
             <Button x:Name="Pico1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="446" Height="85">
-                <Image x:Name="Pico1Imagen" Height="63" Width="73" Stretch="Fill" Source="Pico_Ambar.png" FlowDirection="RightToLeft" Margin="-27,0,325,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                <Image x:Name="Pico1Imagen" Height="63" Width="73" Stretch="Fill" Source="Sourse_Imagen/Pico_Ambar.png" FlowDirection="RightToLeft" Margin="-27,0,325,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
             </Button>
             <Button x:Name="Pico2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="446" Height="85">
-                <Image x:Name="Pico2Imagen" Height="63" Width="73" Margin="-213,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FlowDirection="RightToLeft" Source="Pico_Carbon.png" Stretch="UniformToFill"/>
+                <Image x:Name="Pico2Imagen" Height="63" Width="73" Margin="-213,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FlowDirection="RightToLeft" Source="Sourse_Imagen/Pico_Cobre.png" Stretch="UniformToFill"/>
             </Button>
             <Button x:Name="Pico3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="446" Height="85">
-                <Image  x:Name="Pico3Imagen" Height="63" Width="73" Margin="-213,0,0,0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" FlowDirection="RightToLeft" Source="Pico_Cobre.png"/>
+                <Image  x:Name="Pico3Imagen" Height="63" Width="73" Margin="-213,0,0,0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" FlowDirection="RightToLeft" Source="Sourse_Imagen/Pico_Carbon.png"/>
             </Button>
             <Button x:Name="Pico4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="446" Height="85">
-                <Image  x:Name="Pico4Imagen" Height="63" Width="73" Margin="-213,0,0,0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" FlowDirection="RightToLeft" Source="Pico_Diamante.png"/>
+                <Image  x:Name="Pico4Imagen" Height="63" Width="73" Margin="-213,0,0,0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" FlowDirection="RightToLeft" Source="Sourse_Imagen/Pico_Diamante.png"/>
             </Button>
             <Button x:Name="Pico5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="446" Height="83">
-                <Image x:Name="Pico5Imagen"  Height="63" Width="73" Margin="-214,0,0,0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" FlowDirection="RightToLeft" Source="Pico_Fluorita.png"/>
+                <Image x:Name="Pico5Imagen"  Height="63" Width="73" Margin="-214,0,0,0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" FlowDirection="RightToLeft" Source="Sourse_Imagen/Pico_Fluorita.png"/>
             </Button>
             <Button x:Name="Pico6" HorizontalAlignment="Left" VerticalAlignment="Top" Width="446" Height="85">
-                <Image  x:Name="Pico6Imagen" Height="63" Width="73" Margin="-215,0,9,0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" FlowDirection="RightToLeft" Source="Pico_Hierro.png" IsEnabled="False"/>
+                <Image  x:Name="Pico6Imagen" Height="63" Width="73" Margin="-215,0,9,0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" FlowDirection="RightToLeft" Source="Sourse_Imagen/Pico_Hierro.png" />
             </Button>
             <Button x:Name="Pico7" HorizontalAlignment="Left" VerticalAlignment="Top" Width="446" Height="85">
-                <Image  x:Name="Pico7Imagen" Height="63" Width="73" Margin="-210,0,0,0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" FlowDirection="RightToLeft" Source="Pico_Hueso.png"/>
+                <Image  x:Name="Pico7Imagen" Height="63" Width="73" Margin="-210,0,0,0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" FlowDirection="RightToLeft" Source="Sourse_Imagen/Pico_Hueso.png"/>
             </Button>
             <Button x:Name="Pico8" HorizontalAlignment="Left" VerticalAlignment="Top" Width="446" Height="85">
-                <Image  x:Name="Pico8Imagen" Height="63" Width="73" Margin="-211,0,0,0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" FlowDirection="RightToLeft" Source="Pico_Madera.png"/>
+                <Image  x:Name="Pico8Imagen" Height="63" Width="73" Margin="-214,0,0,0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" FlowDirection="RightToLeft" Source="Sourse_Imagen/Pico_Madera.png"/>
             </Button>
             <Button x:Name="Pico9" HorizontalAlignment="Left" VerticalAlignment="Top" Width="446" Height="85">
-                <Image  x:Name="Pico9Imagen"  Height="63" Width="73" Margin="-210,0,0,0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" FlowDirection="RightToLeft" Source="Pico_Platino.png"/>
+                <Image  x:Name="Pico9Imagen"  Height="63" Width="73" Margin="-210,0,0,0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" FlowDirection="RightToLeft" Source="Sourse_Imagen/Pico_Platino.png"/>
             </Button>
             <Button x:Name="Pico10" HorizontalAlignment="Left" VerticalAlignment="Top" Width="446" Height="85">
-                <Image  x:Name="Pico10Imagen" Height="63" Width="73" Margin="-214,0,0,0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" FlowDirection="RightToLeft" Source="Pico_Amatista.png"/>
+                <Image  x:Name="Pico10Imagen" Height="63" Width="73" Margin="-214,0,0,0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" FlowDirection="RightToLeft" Source="Sourse_Imagen/Pico_Amatista.png" IsEnabled="False"/>
             </Button>
         </ListBox>
         <Button Content="Regresar" HorizontalAlignment="Left" Margin="10,404,0,0" VerticalAlignment="Top" Width="114" Height="37" FontSize="18" FontWeight="Bold" Click="BotonSalirTienda"/>
-        <TextBlock x:Name="TextBoxApodo" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" Height="50" Width="237"/>
-        <Label Content="Dinero:$" HorizontalAlignment="Left" Margin="5,91,0,0" VerticalAlignment="Top" Width="69" Foreground="White" Height="37" FontSize="16"/>
-        <TextBox x:Name="TextBoxDinero" HorizontalAlignment="Left" Height="26" Margin="74,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" FontSize="16" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="White" />
+        <TextBlock x:Name="CajaDeTextoApodo" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" Height="50" Width="237"/>
+        <Label Content="Dinero: $" HorizontalAlignment="Left" Margin="5,91,0,0" VerticalAlignment="Top" Width="69" Foreground="White" Height="37" FontSize="16"/>
+        <TextBox x:Name="CajaDeTextoDinero" HorizontalAlignment="Left" Height="26" Margin="74,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" FontSize="16" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="White" />
     </Grid>
 </Window>

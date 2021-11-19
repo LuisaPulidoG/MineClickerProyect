@@ -8,7 +8,7 @@
         Title="EstadisticasJugador" Height="536.4" Width="768.8">
     <Grid Margin="1,0,2,0">
         <Grid.Background>
-            <ImageBrush ImageSource="Inicio_JuegoFondo.jpg"/>
+            <ImageBrush ImageSource="Sourse_Imagen/TexturaFondoJuego.jpg"/>
         </Grid.Background>
 
     </Grid>

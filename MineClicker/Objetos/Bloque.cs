@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.ServiceModel;
-using Chat_WCF;
 using System.Media;
 
 namespace MineClicker.Objetos

@@ -26,10 +26,10 @@ namespace MineClicker
 
         private void BotonSalirTienda(object sender, RoutedEventArgs e)
         {
-            InicioJuego newinicioJuego = new InicioJuego();
-            newinicioJuego.Username = TextBoxApodo.Text;
+            PantallaPrincipal IniciarPantallaPrincipal = new PantallaPrincipal();
+            IniciarPantallaPrincipal.NombreUsuario = CajaDeTextoApodo.Text;
             this.Close();
-            newinicioJuego.ShowDialog();
+            IniciarPantallaPrincipal.ShowDialog();
         }
     }
 }

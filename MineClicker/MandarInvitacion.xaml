@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="MandarInvitacion" Height="450" Width="800">
     <Grid>
-        
+        <Grid.Background>
+            <ImageBrush ImageSource="Sourse_Imagen/TexturaFondoJuego.jpg"/>
+        </Grid.Background>
+
     </Grid>
 </Window>

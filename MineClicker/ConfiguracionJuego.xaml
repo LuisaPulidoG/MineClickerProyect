@@ -8,7 +8,7 @@
         Title="ConfiguracionJuego" Height="450" Width="800">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="Inicio_JuegoFondo.jpg"/>
+            <ImageBrush ImageSource="Sourse_Imagen/TexturaFondoJuego.jpg"/>
         </Grid.Background>
         <Button x:Name="CambioIdiomaIngles" Content="Ingles" HorizontalAlignment="Left" Margin="408,48,0,0" VerticalAlignment="Top" Width="146" Height="79" FontSize="20" BorderThickness="8">
             <Button.Effect>
