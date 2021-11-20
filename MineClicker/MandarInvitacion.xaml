@@ -16,8 +16,8 @@
         <Label Content="{x:Static p:Resources.FriendName}" HorizontalAlignment="Stretch" Margin="238,109,334.333,0" VerticalAlignment="Top" Foreground="#FFDCE4DA" FontFamily="Bold" FontSize="20" FontWeight="Bold" Height="33"/>
         <Label Content="{x:Static p:Resources.SendInvitationTag}" HorizontalAlignment="Stretch" Margin="29,54,409.333,0" VerticalAlignment="Top" Foreground="#FFDCE4DA" FontFamily="Bold" FontSize="20" FontWeight="Bold" Height="33"/>
         <Button Content="{x:Static p:Resources.BackButton}" HorizontalAlignment="Left" Margin="56,356,0,0" VerticalAlignment="Top" Width="114" Height="37" FontSize="18" FontWeight="Bold" Click="BotonSalirInvitacion"/>
-        <TextBox x:Name="CajaContrasenia" HorizontalAlignment="Stretch" Margin="238,238,243.333,0" VerticalAlignment="Top" Width="312"  Height="29" FontSize="18"/>
-        <TextBox x:Name="CajaContrasenia_Copy" HorizontalAlignment="Stretch" Margin="238,147,243.333,0" VerticalAlignment="Top" Width="312" Height="29" FontSize="18"/>
+        <TextBox x:Name="CajaNombre" HorizontalAlignment="Stretch" Margin="238,147,243.333,0" VerticalAlignment="Top" Width="312" Height="29" FontSize="18"/>
+        <TextBox x:Name="CajaEmail" HorizontalAlignment="Stretch" Margin="238,238,243.333,0" VerticalAlignment="Top" Width="312"  Height="29" FontSize="18"/>
         <Button Content="{x:Static p:Resources.SendInvitationButton}" HorizontalAlignment="Left" Margin="606,356,0,0" VerticalAlignment="Top" Width="114" Height="37" FontSize="18" FontWeight="Bold" Click="BtnSendMailInvitation"/>
 
 
