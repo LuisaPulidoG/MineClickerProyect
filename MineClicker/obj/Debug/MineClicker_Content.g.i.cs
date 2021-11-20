@@ -8,8 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sourse_imagen/romperbloque.mp3")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sourse_imagen/romperbloquewav.wav")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sourse_imagen/texturafondojuego2.jfif")]
 
 

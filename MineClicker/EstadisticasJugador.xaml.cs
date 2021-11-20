@@ -23,5 +23,10 @@ namespace MineClicker
         {
             InitializeComponent();
         }
+
+        private void BotonRegresar(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

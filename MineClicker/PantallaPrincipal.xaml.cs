@@ -22,7 +22,7 @@ namespace MineClicker
     /// 
     public partial class PantallaPrincipal : Window
     {
-        SoundPlayer EfSonidobloque = new SoundPlayer(@"C:\Users\luisa\source\repos\Samytheturtle\MineClickerProyect\MineClicker\Sourse_Imagen\RomperBloquewav.wav");
+        SoundPlayer EfSonidobloque = new SoundPlayer(@"E:\Proyectos Visual Studio\repos\MineClickerTecno\MineClicker\Sourse_Imagen\RomperBloquewav.wav");
         int bloqueactual;
         int numerorandom;
         int bloquesDestridos = 0;
@@ -108,7 +108,10 @@ namespace MineClicker
 
         private void BotonIniciarChat(object sender, RoutedEventArgs e)
         {
+            ChatJugadores ventanaChatJugadores = new ChatJugadores();
+
             this.Close();
+            ventanaChatJugadores.ShowDialog();
         }
 
         private void BotonTiendaPico(object sender, RoutedEventArgs e)
@@ -139,7 +142,9 @@ namespace MineClicker
 
         private void BotonEstadisticas(object sender, RoutedEventArgs e)
         {
-
+            EstadisticasJugador ventanaestadisticas = new EstadisticasJugador();
+            this.Close();
+            ventanaestadisticas.ShowDialog();
         }
 
         private void BotonIniciarMultijugador(object sender, RoutedEventArgs e)

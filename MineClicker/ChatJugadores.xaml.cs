@@ -34,9 +34,10 @@ namespace MineClicker
 
         }
 
-        private void BotonSalitChat(object sender, RoutedEventArgs e)
+        private void BotonSalir(object sender, RoutedEventArgs e)
         {
 
         }
+    
     }
 }

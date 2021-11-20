@@ -23,5 +23,7 @@
         <Label Content="{x:Static p:Resources.PasswordLogin}" HorizontalAlignment="Stretch" Margin="347,205,265,0" VerticalAlignment="Top" Foreground="#FF48E423" FontFamily="Perpetua" FontSize="20" FontWeight="Bold" Width="98" Height="33"/>
         <Image x:Name="TituloJuego" HorizontalAlignment="Stretch" Height="73" VerticalAlignment="Top" Width="367" Margin="212,10,131,0" Source="Sourse_Imagen/TituloOriginal.png"/>
         <PasswordBox x:Name="CajaContrasenia" HorizontalAlignment="Stretch" Margin="240,243,158,0" VerticalAlignment="Top" Width="312" PasswordChar="*" Height="29" FontSize="18"/>
+        <Label Content="No tienes Cuenta en MineClicker?" HorizontalAlignment="Left" Margin="298,348,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="Red" Width="190"/>
+        <Button Content="Crear Cuenta" HorizontalAlignment="Left" Margin="347,379,0,0" VerticalAlignment="Top" Width="88" Height="21" FontWeight="Bold" Click="BotonRegistrarJugador"/>
     </Grid>
 </Window>
