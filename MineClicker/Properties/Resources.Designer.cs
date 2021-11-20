@@ -63,18 +63,171 @@ namespace MineClicker.Properties {
         /// <summary>
         ///   Busca una cadena traducida similar a Accept.
         /// </summary>
-        public static string Accept_Buttom {
+        public static string AcceptButton {
             get {
-                return ResourceManager.GetString("Accept_Buttom", resourceCulture);
+                return ResourceManager.GetString("AcceptButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Go back.
+        /// </summary>
+        public static string BackButton {
+            get {
+                return ResourceManager.GetString("BackButton", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Busca una cadena traducida similar a Cancel.
         /// </summary>
-        public static string Cancel_Buttom {
+        public static string CancelButton {
             get {
-                return ResourceManager.GetString("Cancel_Buttom", resourceCulture);
+                return ResourceManager.GetString("CancelButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Talk in chat.
+        /// </summary>
+        public static string ChatButton {
+            get {
+                return ResourceManager.GetString("ChatButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Coins: $.
+        /// </summary>
+        public static string Coins {
+            get {
+                return ResourceManager.GetString("Coins", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Configuration.
+        /// </summary>
+        public static string ConfigButton {
+            get {
+                return ResourceManager.GetString("ConfigButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Clics/sec:.
+        /// </summary>
+        public static string CountClicks {
+            get {
+                return ResourceManager.GetString("CountClicks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a .
+        /// </summary>
+        public static string DescriptionP1 {
+            get {
+                return ResourceManager.GetString("DescriptionP1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a .
+        /// </summary>
+        public static string DescriptionP10 {
+            get {
+                return ResourceManager.GetString("DescriptionP10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a .
+        /// </summary>
+        public static string DescriptionP2 {
+            get {
+                return ResourceManager.GetString("DescriptionP2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a .
+        /// </summary>
+        public static string DescriptionP3 {
+            get {
+                return ResourceManager.GetString("DescriptionP3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a .
+        /// </summary>
+        public static string DescriptionP4 {
+            get {
+                return ResourceManager.GetString("DescriptionP4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a .
+        /// </summary>
+        public static string DescriptionP5 {
+            get {
+                return ResourceManager.GetString("DescriptionP5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a .
+        /// </summary>
+        public static string DescriptionP6 {
+            get {
+                return ResourceManager.GetString("DescriptionP6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a .
+        /// </summary>
+        public static string DescriptionP7 {
+            get {
+                return ResourceManager.GetString("DescriptionP7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a .
+        /// </summary>
+        public static string DescriptionP8 {
+            get {
+                return ResourceManager.GetString("DescriptionP8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a .
+        /// </summary>
+        public static string DescriptionP9 {
+            get {
+                return ResourceManager.GetString("DescriptionP9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Destroyed blocks: .
+        /// </summary>
+        public static string DestroyedBlocks {
+            get {
+                return ResourceManager.GetString("DestroyedBlocks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Enter e-Mail :.
+        /// </summary>
+        public static string eMail {
+            get {
+                return ResourceManager.GetString("eMail", resourceCulture);
             }
         }
         
@@ -88,6 +241,15 @@ namespace MineClicker.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a English.
+        /// </summary>
+        public static string EnglishButton {
+            get {
+                return ResourceManager.GetString("EnglishButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a First Name.
         /// </summary>
         public static string FirstName {
@@ -97,11 +259,65 @@ namespace MineClicker.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Enter friend name : .
+        /// </summary>
+        public static string FriendName {
+            get {
+                return ResourceManager.GetString("FriendName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Help.
         /// </summary>
-        public static string Help_Buttom {
+        public static string HelpButton {
             get {
-                return ResourceManager.GetString("Help_Buttom", resourceCulture);
+                return ResourceManager.GetString("HelpButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Send invitation .
+        /// </summary>
+        public static string InvitationButton {
+            get {
+                return ResourceManager.GetString("InvitationButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Japanese.
+        /// </summary>
+        public static string JapaneseButton {
+            get {
+                return ResourceManager.GetString("JapaneseButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Language.
+        /// </summary>
+        public static string LanguageTag {
+            get {
+                return ResourceManager.GetString("LanguageTag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Login.
+        /// </summary>
+        public static string LoginButton {
+            get {
+                return ResourceManager.GetString("LoginButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Start multiplayer.
+        /// </summary>
+        public static string MultiplayerButton {
+            get {
+                return ResourceManager.GetString("MultiplayerButton", resourceCulture);
             }
         }
         
@@ -111,6 +327,96 @@ namespace MineClicker.Properties {
         public static string Name {
             get {
                 return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Amber.
+        /// </summary>
+        public static string NameP1 {
+            get {
+                return ResourceManager.GetString("NameP1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Amethyst.
+        /// </summary>
+        public static string NameP10 {
+            get {
+                return ResourceManager.GetString("NameP10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Copper.
+        /// </summary>
+        public static string NameP2 {
+            get {
+                return ResourceManager.GetString("NameP2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Coal.
+        /// </summary>
+        public static string NameP3 {
+            get {
+                return ResourceManager.GetString("NameP3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Diamond.
+        /// </summary>
+        public static string NameP4 {
+            get {
+                return ResourceManager.GetString("NameP4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Fluorite.
+        /// </summary>
+        public static string NameP5 {
+            get {
+                return ResourceManager.GetString("NameP5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Iron.
+        /// </summary>
+        public static string NameP6 {
+            get {
+                return ResourceManager.GetString("NameP6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Bone.
+        /// </summary>
+        public static string NameP7 {
+            get {
+                return ResourceManager.GetString("NameP7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Wood.
+        /// </summary>
+        public static string NameP8 {
+            get {
+                return ResourceManager.GetString("NameP8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Platinum.
+        /// </summary>
+        public static string NameP9 {
+            get {
+                return ResourceManager.GetString("NameP9", resourceCulture);
             }
         }
         
@@ -133,6 +439,96 @@ namespace MineClicker.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Coins: $ 30.0.
+        /// </summary>
+        public static string PriceP1 {
+            get {
+                return ResourceManager.GetString("PriceP1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Coins: $ 120.
+        /// </summary>
+        public static string PriceP10 {
+            get {
+                return ResourceManager.GetString("PriceP10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Coins: $ 40.0.
+        /// </summary>
+        public static string PriceP2 {
+            get {
+                return ResourceManager.GetString("PriceP2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Coins: $ 50.0.
+        /// </summary>
+        public static string PriceP3 {
+            get {
+                return ResourceManager.GetString("PriceP3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Coins: $ 60.0.
+        /// </summary>
+        public static string PriceP4 {
+            get {
+                return ResourceManager.GetString("PriceP4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Coins: $ 70.0.
+        /// </summary>
+        public static string PriceP5 {
+            get {
+                return ResourceManager.GetString("PriceP5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Coins: $ 80.0.
+        /// </summary>
+        public static string PriceP6 {
+            get {
+                return ResourceManager.GetString("PriceP6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Coins: $ 90.
+        /// </summary>
+        public static string Pricep7 {
+            get {
+                return ResourceManager.GetString("Pricep7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Coins: $ 100.
+        /// </summary>
+        public static string PriceP8 {
+            get {
+                return ResourceManager.GetString("PriceP8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Coins: $ 110.
+        /// </summary>
+        public static string PriceP9 {
+            get {
+                return ResourceManager.GetString("PriceP9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Second Name.
         /// </summary>
         public static string SecondName {
@@ -142,20 +538,92 @@ namespace MineClicker.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a User Register.
+        ///   Busca una cadena traducida similar a Invite.
         /// </summary>
-        public static string Title {
+        public static string SendInvitationButton {
             get {
-                return ResourceManager.GetString("Title", resourceCulture);
+                return ResourceManager.GetString("SendInvitationButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ask a friend to join the game!.
+        /// </summary>
+        public static string SendInvitationTag {
+            get {
+                return ResourceManager.GetString("SendInvitationTag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Spanish.
+        /// </summary>
+        public static string SpanishButton {
+            get {
+                return ResourceManager.GetString("SpanishButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Stats.
+        /// </summary>
+        public static string StatsButton {
+            get {
+                return ResourceManager.GetString("StatsButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Peak Store.
+        /// </summary>
+        public static string StoreButton {
+            get {
+                return ResourceManager.GetString("StoreButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Invite a friend.
+        /// </summary>
+        public static string TitleInvitation {
+            get {
+                return ResourceManager.GetString("TitleInvitation", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Busca una cadena traducida similar a Login.
         /// </summary>
-        public static string Title_login {
+        public static string TitleLogin {
             get {
-                return ResourceManager.GetString("Title_login", resourceCulture);
+                return ResourceManager.GetString("TitleLogin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Mine Clicker.
+        /// </summary>
+        public static string TitleMain {
+            get {
+                return ResourceManager.GetString("TitleMain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a User Register.
+        /// </summary>
+        public static string TitleRegister {
+            get {
+                return ResourceManager.GetString("TitleRegister", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Store.
+        /// </summary>
+        public static string TitleStore {
+            get {
+                return ResourceManager.GetString("TitleStore", resourceCulture);
             }
         }
     }

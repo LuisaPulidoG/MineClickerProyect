@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:MineClicker"
         xmlns:p = "clr-namespace:MineClicker.Properties"
-        Title ="Inicio sesion" Height="450" Width="800" Icon="Sourse_Imagen/FondoChat.jpg">
+        Title ="{x:Static p:Resources.TitleLogin}" Height="450" Width="800" Icon="Sourse_Imagen/FondoChat.jpg">
     <Window.Background>
         <ImageBrush/>
     </Window.Background>
@@ -16,11 +16,11 @@
         <Grid.Background>
             <ImageBrush ImageSource="Sourse_Imagen/TexturaFondoInicioSesion.jpg"/>
         </Grid.Background>
-        <Button Click="BotonCancelar" Content="Cancelar" HorizontalAlignment="Stretch" Margin="274,318,345,0" VerticalAlignment="Top" Width="91" FontWeight="Bold" FontSize="16" RenderTransformOrigin="-1.066,0.32"/>
-        <Button Click="BotonIngresar" Content="Ingresar" HorizontalAlignment="Stretch" Margin="420,318,192,0" VerticalAlignment="Top" Width="98" FontWeight="Bold" FontSize="16"/>
+        <Button Click="BotonCancelar" Content="{x:Static p:Resources.CancelButton}" HorizontalAlignment="Stretch" Margin="274,318,345,0" VerticalAlignment="Top" Width="91" FontWeight="Bold" FontSize="16" RenderTransformOrigin="-1.066,0.32"/>
+        <Button Click="BotonIngresar" Content="{x:Static p:Resources.LoginButton}" HorizontalAlignment="Stretch" Margin="420,318,192,0" VerticalAlignment="Top" Width="98" FontWeight="Bold" FontSize="16"/>
         <TextBox x:Name="CajatxNombreUsuario" HorizontalAlignment="Stretch" Height="25" Margin="240,142,158,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="312" FontSize="14"/>
-        <Label Content="NickName" HorizontalAlignment="Stretch" Margin="347,104,265,0" VerticalAlignment="Top" Foreground="#FF0A2703" FontFamily="Perpetua" FontSize="20" FontWeight="Bold" Width="98" Height="33"/>
-        <Label Content="Password" HorizontalAlignment="Stretch" Margin="347,205,265,0" VerticalAlignment="Top" Foreground="#FF48E423" FontFamily="Perpetua" FontSize="20" FontWeight="Bold" Width="98" Height="33"/>
+        <Label Content="{x:Static p:Resources.Nickname}" HorizontalAlignment="Stretch" Margin="347,104,265,0" VerticalAlignment="Top" Foreground="#FF0A2703" FontFamily="Perpetua" FontSize="20" FontWeight="Bold" Width="98" Height="33"/>
+        <Label Content="{x:Static p:Resources.PasswordLogin}" HorizontalAlignment="Stretch" Margin="347,205,265,0" VerticalAlignment="Top" Foreground="#FF48E423" FontFamily="Perpetua" FontSize="20" FontWeight="Bold" Width="98" Height="33"/>
         <Image x:Name="TituloJuego" HorizontalAlignment="Stretch" Height="73" VerticalAlignment="Top" Width="367" Margin="212,10,131,0" Source="Sourse_Imagen/TituloOriginal.png"/>
         <PasswordBox x:Name="CajaContrasenia" HorizontalAlignment="Stretch" Margin="240,243,158,0" VerticalAlignment="Top" Width="312" PasswordChar="*" Height="29" FontSize="18"/>
     </Grid>

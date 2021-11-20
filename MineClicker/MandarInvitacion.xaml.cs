@@ -23,5 +23,17 @@ namespace MineClicker
         {
             InitializeComponent();
         }
+
+        private void BotonSalirInvitacion(object sender, RoutedEventArgs e)
+        {
+            PantallaPrincipal IniciarPantallaPrincipal = new PantallaPrincipal();
+            this.Close();
+            IniciarPantallaPrincipal.ShowDialog();
+        }
+
+        private void BtnSendMailInvitation(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
