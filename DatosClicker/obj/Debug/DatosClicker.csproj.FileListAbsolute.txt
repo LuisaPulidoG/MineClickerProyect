@@ -5,3 +5,12 @@ E:\Proyectos Visual Studio\repos\MineClickerTecno\DatosClicker\obj\Debug\DatosCl
 E:\Proyectos Visual Studio\repos\MineClickerTecno\DatosClicker\obj\Debug\DatosClicker.csproj.CoreCompileInputs.cache
 E:\Proyectos Visual Studio\repos\MineClickerTecno\DatosClicker\obj\Debug\DatosClicker.exe
 E:\Proyectos Visual Studio\repos\MineClickerTecno\DatosClicker\obj\Debug\DatosClicker.pdb
+C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\DatosClicker\bin\Debug\DatosClicker.exe.config
+C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\DatosClicker\bin\Debug\DatosClicker.exe
+C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\DatosClicker\bin\Debug\DatosClicker.pdb
+C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\DatosClicker\bin\Debug\EASendMail.dll
+C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\DatosClicker\obj\Debug\DatosClicker.csproj.AssemblyReference.cache
+C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\DatosClicker\obj\Debug\DatosClicker.csproj.CoreCompileInputs.cache
+C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\DatosClicker\obj\Debug\DatosClicker.csproj.CopyComplete
+C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\DatosClicker\obj\Debug\DatosClicker.exe
+C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\DatosClicker\obj\Debug\DatosClicker.pdb

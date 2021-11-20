@@ -11,7 +11,7 @@ namespace MineClicker.EmailSender
     {
         public void SendEmail(string nombreAmigo, string correoAmigo)
         {
-            string mensaje = "Error al enviar correo.";
+            string message = "Error al enviar correo.";
 
             try
             {
@@ -24,20 +24,20 @@ namespace MineClicker.EmailSender
 
                 SmtpServer serverObject = new SmtpServer("smtp.gmail.com");
 
-                serverObject.User = "bastagameservice@gmail.com";
-                serverObject.Password = "30dpr4319n";
+                serverObject.User = "mineclickerservice@gmail.com";
+                serverObject.Password = "mineclicker2000";
                 serverObject.Port = 587;
                 serverObject.ConnectType = SmtpConnectType.ConnectSSLAuto;
 
                 SmtpClient clientObject = new SmtpClient();
                 clientObject.SendMail(serverObject, emailObject);
-                mensaje = "Correo Enviado Correctamente.";
+                message = "Correo Enviado Correctamente.";
 
 
             }
             catch (Exception ex)
             {
-                mensaje = "Error al enviar correo." + ex.Message;
+                message = "Error al enviar correo." + ex.Message;
             }
         }
     }
