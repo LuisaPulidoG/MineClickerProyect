@@ -189,7 +189,6 @@
     <Resource Include="Sourse_Imagen\Bloque4.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Sourse_Imagen\WhatsApp Image 2021-10-02 at 5.12.47 PM %281%29.jpeg" />
     <Resource Include="Sourse_Imagen\Flecha_Derecha.png" />
     <Resource Include="Sourse_Imagen\Flecha_Izquierda.png" />
     <Resource Include="Sourse_Imagen\FondoChat.jpg" />
@@ -204,12 +203,10 @@
     <Resource Include="Sourse_Imagen\Pico_Hueso.png" />
     <Resource Include="Sourse_Imagen\Pico_Madera.png" />
     <Resource Include="Sourse_Imagen\Pico_Platino.png" />
-    <Content Include="Sourse_Imagen\RomperBloque.mp3" />
     <Content Include="Sourse_Imagen\RomperBloquewav.wav" />
     <Resource Include="Sourse_Imagen\TexturaBotonChatGlobal.png" />
     <Resource Include="Sourse_Imagen\TexturaFondoInicioSesion.jpg" />
     <Resource Include="Sourse_Imagen\TexturaFondoJuego.jpg" />
-    <Content Include="Sourse_Imagen\TexturaFondoJuego2.jfif" />
     <Resource Include="Sourse_Imagen\TexturaLupaBuscar.png" />
     <Resource Include="Sourse_Imagen\TituloJapones.png" />
     <Resource Include="Sourse_Imagen\TituloOriginal.png" />

@@ -64,6 +64,9 @@ namespace MineClicker
 
         }
 
+        private void BotonRegistrarJugador(object sender, RoutedEventArgs e)
+        {
 
+        }
     }
 }

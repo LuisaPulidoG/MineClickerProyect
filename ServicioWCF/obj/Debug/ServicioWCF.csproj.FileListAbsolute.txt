@@ -1,8 +1,10 @@
 E:\Proyectos Visual Studio\repos\MineClickerTecno\ServicioWCF\bin\Debug\ServicioWCF.dll.config
 E:\Proyectos Visual Studio\repos\MineClickerTecno\ServicioWCF\bin\Debug\ServicioWCF.dll
 E:\Proyectos Visual Studio\repos\MineClickerTecno\ServicioWCF\bin\Debug\ServicioWCF.pdb
+E:\Proyectos Visual Studio\repos\MineClickerTecno\ServicioWCF\bin\Debug\EASendMail.dll
 E:\Proyectos Visual Studio\repos\MineClickerTecno\ServicioWCF\obj\Debug\ServicioWCF.csproj.AssemblyReference.cache
 E:\Proyectos Visual Studio\repos\MineClickerTecno\ServicioWCF\obj\Debug\ServicioWCF.csproj.CoreCompileInputs.cache
+E:\Proyectos Visual Studio\repos\MineClickerTecno\ServicioWCF\obj\Debug\ServicioWCF.csproj.CopyComplete
 E:\Proyectos Visual Studio\repos\MineClickerTecno\ServicioWCF\obj\Debug\ServicioWCF.dll
 E:\Proyectos Visual Studio\repos\MineClickerTecno\ServicioWCF\obj\Debug\ServicioWCF.pdb
 C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\ServicioWCF\bin\Debug\ServicioWCF.dll.config
