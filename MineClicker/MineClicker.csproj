@@ -183,6 +183,7 @@
     <Resource Include="Sourse_Imagen\Bloque4.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Sourse_Imagen\WhatsApp Image 2021-10-02 at 5.12.47 PM %281%29.jpeg" />
     <Resource Include="Sourse_Imagen\Flecha_Derecha.png" />
     <Resource Include="Sourse_Imagen\Flecha_Izquierda.png" />
     <Resource Include="Sourse_Imagen\FondoChat.jpg" />

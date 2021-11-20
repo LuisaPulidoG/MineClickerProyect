@@ -37,3 +37,7 @@ E:\Proyectos Visual Studio\repos\MineClickerTecno\MineClicker\obj\Debug\Registra
 E:\Proyectos Visual Studio\repos\MineClickerTecno\MineClicker\obj\Debug\IniciarSesion.baml
 E:\Proyectos Visual Studio\repos\MineClickerTecno\MineClicker\obj\Debug\TiendaPicos.baml
 E:\Proyectos Visual Studio\repos\MineClickerTecno\MineClicker\obj\Debug\MineClicker.csproj.CopyComplete
+E:\Proyectos Visual Studio\repos\MineClickerTecno\MineClicker\obj\Debug\ChatJugadores.g.cs
+E:\Proyectos Visual Studio\repos\MineClickerTecno\MineClicker\obj\Debug\IniciarMultijugador.g.cs
+E:\Proyectos Visual Studio\repos\MineClickerTecno\MineClicker\obj\Debug\ChatJugadores.baml
+E:\Proyectos Visual Studio\repos\MineClickerTecno\MineClicker\obj\Debug\IniciarMultijugador.baml

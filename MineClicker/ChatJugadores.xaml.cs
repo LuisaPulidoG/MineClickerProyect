@@ -23,5 +23,20 @@ namespace MineClicker
         {
             InitializeComponent();
         }
+
+        private void BotonEnviarMensaje(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BotonChatGeneral(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BotonSalitChat(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
