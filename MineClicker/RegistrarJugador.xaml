@@ -3,7 +3,7 @@
     xmlns:x = "http://schemas.microsoft.com/winfx/2006/xaml" 
     xmlns:local = "clr-namespace:MineClicker" 
     xmlns:p = "clr-namespace:MineClicker.Properties"
-    Title ="{x:Static p:Resources.Title}" Height = "476.22" Width = "707.171">
+    Title ="{x:Static p:Resources.TitleRegister}" Height = "476.22" Width = "707.171">
 
     <Grid Margin="0,0,2,2">
         <Grid.Background>
@@ -25,9 +25,9 @@
             Margin = "27,284,0,0" TextWrapping = "Wrap" VerticalAlignment = "Top" Width = "304"/>
         <TextBox x:Name = "textBox_Copy4" HorizontalAlignment = "Left" Height = "23" 
             Margin = "368,284,0,0" TextWrapping = "Wrap" VerticalAlignment = "Top" Width = "304" Grid.ColumnSpan="2"/>
-        <Button Content="{x:Static p:Resources.Accept_Buttom}" HorizontalAlignment="Left" Margin="191,383,0,0" VerticalAlignment="Top" Width="75" />
-        <Button Content="{x:Static p:Resources.Cancel_Buttom}" HorizontalAlignment="Left" Margin="314,383,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="{x:Static p:Resources.Help_Buttom}" HorizontalAlignment="Left" Margin="446,383,0,0" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2"/>
+        <Button Content="{x:Static p:Resources.AcceptButton}" HorizontalAlignment="Left" Margin="191,383,0,0" VerticalAlignment="Top" Width="75" />
+        <Button Content="{x:Static p:Resources.CancelButton}" HorizontalAlignment="Left" Margin="314,383,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="{x:Static p:Resources.HelpButton}" HorizontalAlignment="Left" Margin="446,383,0,0" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2"/>
         <Label Content="{x:Static p:Resources.FirstName}"  HorizontalAlignment="Left" Margin="145,172,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="{x:Static p:Resources.Name}" HorizontalAlignment="Left" Margin="156,90,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="{x:Static p:Resources.EmailLogin}"  HorizontalAlignment="Left" Margin="26,172,0,0" VerticalAlignment="Top" Grid.Column="1" Foreground="White"/>

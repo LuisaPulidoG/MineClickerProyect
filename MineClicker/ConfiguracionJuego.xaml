@@ -4,28 +4,29 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MineClicker"
+        xmlns:p = "clr-namespace:MineClicker.Properties"
         mc:Ignorable="d"
         Title="ConfiguracionJuego" Height="450" Width="800">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="Sourse_Imagen/TexturaFondoJuego.jpg"/>
         </Grid.Background>
-        <Button x:Name="CambioIdiomaIngles" Content="Ingles" HorizontalAlignment="Left" Margin="408,48,0,0" VerticalAlignment="Top" Width="146" Height="79" FontSize="20" BorderThickness="8">
+        <Button x:Name="CambioIdiomaIngles" Content="{x:Static p:Resources.EnglishButton}" HorizontalAlignment="Left" Margin="408,174,0,0" VerticalAlignment="Top" Width="146" Height="79" FontSize="20" BorderThickness="8">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button x:Name="CambioIdiomaJapones" Content="Japones" HorizontalAlignment="Left" Margin="601,48,0,0" VerticalAlignment="Top" Width="146" Height="79" FontSize="20" BorderThickness="8" Padding="1" UseLayoutRounding="False">
+        <Button x:Name="CambioIdiomaJapones" Content="{x:Static p:Resources.JapaneseButton}" HorizontalAlignment="Left" Margin="601,174,0,0" VerticalAlignment="Top" Width="146" Height="79" FontSize="20" BorderThickness="8" Padding="1" UseLayoutRounding="False">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button x:Name="CambioIdiomaEspaniol" Content="Español" HorizontalAlignment="Left" Margin="199,48,0,0" VerticalAlignment="Top" Width="146" Height="79" FontSize="20" BorderThickness="8">
+        <Button x:Name="CambioIdiomaEspaniol" Content="{x:Static p:Resources.SpanishButton}" HorizontalAlignment="Left" Margin="199,174,0,0" VerticalAlignment="Top" Width="146" Height="79" FontSize="20" BorderThickness="8">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Label Content="Lenguaje" HorizontalAlignment="Left" Margin="15,58,0,0" VerticalAlignment="Top" Height="62" Width="155" FontSize="36" RenderTransformOrigin="0.5,0.5" Background="{x:Null}" Foreground="White">
+        <Label Content="{x:Static p:Resources.LanguageTag}" HorizontalAlignment="Left" Margin="15,58,0,0" VerticalAlignment="Top" Height="62" Width="173" FontSize="36" RenderTransformOrigin="0.5,0.5" Background="{x:Null}" Foreground="White">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -35,7 +36,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Button Content="Regresar" HorizontalAlignment="Left" Margin="10,361,0,0" VerticalAlignment="Top" Width="95" Height="38" Foreground="White" Background="{x:Null}" FontSize="16" FontWeight="Bold" Click="BotonRegresar"/>
+        <Button Content="{x:Static p:Resources.BackButton}" HorizontalAlignment="Left" Margin="10,361,0,0" VerticalAlignment="Top" Width="95" Height="38" Foreground="White" Background="{x:Null}" FontSize="16" FontWeight="Bold" Click="BotonRegresar"/>
 
     </Grid>
 </Window>
