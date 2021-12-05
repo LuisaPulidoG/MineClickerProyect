@@ -53,7 +53,7 @@ namespace ServicioWCF
             set { tiempo = value; }
         }
     }
-    [ServiceContract(CallbackContract = typeof(IChatCallBlack),
+    [ServiceContract(CallbackContract = typeof(IChatCallback),
                          SessionMode = SessionMode.Required)]
     public interface IChat
     {
@@ -73,7 +73,7 @@ namespace ServicioWCF
         void Desconectado(Usuario usuario);
     }
 
-    public interface IChatCallBlack
+    public interface IChatCallback
     {
         [OperationContract(IsOneWay = true)]
         void RecargarClientes(List<Usuario> usuarios);
@@ -98,17 +98,17 @@ namespace ServicioWCF
     UseSynchronizationContext = false)]
     public class ServicioChat:IChat
     {
-        Dictionary<Usuario, IChatCallBlack> clientes =
-                 new Dictionary<Usuario, IChatCallBlack>();
+        Dictionary<Usuario, IChatCallback> clientes =
+                 new Dictionary<Usuario, IChatCallback>();
 
         List<Usuario> listaClientes = new List<Usuario>();
 
-        public IChatCallBlack CurrentCallback
+        public IChatCallback CurrentCallback
         {
             get
             {
                 return OperationContext.Current.
-                       GetCallbackChannel<IChatCallBlack>();
+                       GetCallbackChannel<IChatCallback>();
             }
         }
 
@@ -138,7 +138,7 @@ namespace ServicioWCF
 
                     foreach (Usuario key in clientes.Keys)
                     {
-                        IChatCallBlack callback = clientes[key];
+                        IChatCallback callback = clientes[key];
                         try
                         {
                             callback.RecargarClientes(listaClientes);
@@ -162,7 +162,7 @@ namespace ServicioWCF
         {
             lock (objetoAuxilizar)
             {
-                foreach (IChatCallBlack callback in clientes.Values)
+                foreach (IChatCallback callback in clientes.Values)
                 {
                     callback.RecibirMensaje(mensajeUsuario);
                 }
@@ -175,14 +175,14 @@ namespace ServicioWCF
             {
                 if (usuarioRemintente.Nombre == usuarioReceptor.Nombre)
                 {
-                    IChatCallBlack callback = clientes[usuarioRemintente];
+                    IChatCallback callback = clientes[usuarioRemintente];
                     callback.RecibirToque(mensajeUsuario, usuarioRemintente);
 
                     foreach (Usuario UsuarioEnvio in clientes.Keys)
                     {
                         if (UsuarioEnvio.Nombre == mensajeUsuario.UsuaruiRemitente)
                         {
-                            IChatCallBlack senderCallback = clientes[UsuarioEnvio];
+                            IChatCallback senderCallback = clientes[UsuarioEnvio];
                             senderCallback.RecibirToque(mensajeUsuario, usuarioRemintente);
                             return;
                         }
@@ -195,7 +195,7 @@ namespace ServicioWCF
         {
             lock (objetoAuxilizar)
             {
-                foreach (IChatCallBlack callback in clientes.Values)
+                foreach (IChatCallback callback in clientes.Values)
                 {
                     callback.EstaEscribiendoCallBack(usuario);
                 }
@@ -212,7 +212,7 @@ namespace ServicioWCF
                     {
                         this.clientes.Remove(UsuarioSys);
                         this.listaClientes.Remove(UsuarioSys);
-                        foreach (IChatCallBlack callback in clientes.Values)
+                        foreach (IChatCallback callback in clientes.Values)
                         {
                             callback.RecargarClientes(this.listaClientes);
                             callback.UsuarioSalio(usuario);

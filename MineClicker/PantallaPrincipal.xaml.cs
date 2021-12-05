@@ -14,6 +14,8 @@ using System.Windows.Shapes;
 using System.ServiceModel;
 using System.Media;
 using MineClicker.Objetos;
+using System.IO;
+
 namespace MineClicker
 {
     /// <summary>
@@ -22,7 +24,7 @@ namespace MineClicker
     /// 
     public partial class PantallaPrincipal : Window
     {
-        SoundPlayer EfSonidobloque = new SoundPlayer(@"E:\Proyectos Visual Studio\repos\MineClickerTecno\MineClicker\Sourse_Imagen\RomperBloquewav.wav");
+        SoundPlayer EfSonidobloque = new SoundPlayer(Properties.SoundResources.RomperBloquewav as Stream);
         int bloqueactual;
         int numerorandom;
         int bloquesDestridos = 0;
