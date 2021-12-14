@@ -1,0 +1,32 @@
+﻿<Window x:Class="MineClicker.ChatJugadores"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MineClicker"
+        mc:Ignorable="d"
+        Title="ChatJugadores" Height="471.6" Width="856.4">
+    <Grid Margin="0,0,2,0">
+        <Grid.Background>
+            <ImageBrush ImageSource="Sourse_Imagen/TexturaFondoJuego.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Image HorizontalAlignment="Left" Height="367" Margin="576,18,0,0" VerticalAlignment="Top" Width="260" Source="Sourse_Imagen/FondoChat.jpg" Stretch="Fill"/>
+        <ListBox x:Name="ListaContactos" HorizontalAlignment="Left" Height="367" Margin="576,18,0,0" VerticalAlignment="Top" Width="260" Background="{x:Null}"/>
+        <ListBox x:Name="CajadeListaMensajes" HorizontalAlignment="Left" Height="367" Margin="137,18,0,0" VerticalAlignment="Top" Width="421"/>
+        <TextBox x:Name="CajadeTextoMensaje" HorizontalAlignment="Left" Height="41" Margin="137,390,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="371"/>
+        <Button Content="Enviar" HorizontalAlignment="Left" Margin="513,390,0,0" VerticalAlignment="Top" Width="45" Height="41" Foreground="White" BorderBrush="White" Click="BotonEnviarMensaje">
+            <Button.Background>
+                <ImageBrush ImageSource="Sourse_Imagen/IconoEnviarMensaje.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="Chat global" HorizontalAlignment="Left" Margin="734,402,0,0" VerticalAlignment="Top" Width="102" Height="29" Foreground="White" FontSize="18" Click="BotonChatGeneral">
+            <Button.Background>
+                <ImageBrush ImageSource="Sourse_Imagen/TexturaBotonChatGlobal.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <Label x:Name="LabelnombreUsuario" Content="" HorizontalAlignment="Left" Margin="10,18,0,0" VerticalAlignment="Top" Foreground="White" Height="28" Width="112" BorderBrush="White"/>
+        <Label x:Name="ApodoUsuario" Content="" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top" Height="25" Width="112" Foreground="White"/>
+        <Button Content="Salir" HorizontalAlignment="Left" Margin="10,397,0,0" VerticalAlignment="Top" Width="82" RenderTransformOrigin="0.419,1.525" Click="BotonSalir" Height="34" Background="{x:Null}" BorderBrush="White" Foreground="White" FontSize="18"/>
+
+    </Grid>
+</Window>
