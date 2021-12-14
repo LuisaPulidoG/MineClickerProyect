@@ -1,0 +1,529 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MineClickerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Block">
+          <Key>
+            <PropertyRef Name="BlockId" />
+          </Key>
+          <Property Name="BlockId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Value" Type="float" Nullable="false" />
+          <Property Name="Rarity" Type="int" Nullable="false" />
+          <Property Name="Hardness" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Game">
+          <Key>
+            <PropertyRef Name="GameId" />
+          </Key>
+          <Property Name="GameId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PlayerId" Type="int" Nullable="false" />
+          <Property Name="CreationDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Pickaxe">
+          <Key>
+            <PropertyRef Name="PickaxeId" />
+          </Key>
+          <Property Name="PickaxeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Efficiency" Type="int" Nullable="false" />
+          <Property Name="Price" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Player">
+          <Key>
+            <PropertyRef Name="PlayerId" />
+          </Key>
+          <Property Name="PlayerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Username" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Money" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PlayerFriend">
+          <Key>
+            <PropertyRef Name="PlayerId" />
+            <PropertyRef Name="PlayerFriendId" />
+          </Key>
+          <Property Name="PlayerId" Type="int" Nullable="false" />
+          <Property Name="PlayerFriendId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PlayerGame">
+          <Key>
+            <PropertyRef Name="PlayerGameId" />
+          </Key>
+          <Property Name="PlayerGameId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PlayerId" Type="int" Nullable="false" />
+          <Property Name="GameId" Type="int" Nullable="false" />
+          <Property Name="EarnedMoney" Type="float" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'MineClicker.dbo.PlayerGameBlock' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="PlayerGameBlock">
+          <Key>
+            <PropertyRef Name="PlayerGameId" />
+            <PropertyRef Name="BlockId" />
+            <PropertyRef Name="Destroyed" />
+          </Key>
+          <Property Name="PlayerGameId" Type="int" Nullable="false" />
+          <Property Name="BlockId" Type="int" Nullable="false" />
+          <Property Name="Destroyed" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PlayerPickaxe">
+          <Key>
+            <PropertyRef Name="PlayerId" />
+            <PropertyRef Name="PickaxeId" />
+          </Key>
+          <Property Name="PlayerId" Type="int" Nullable="false" />
+          <Property Name="PickaxeId" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__Game__PlayerId__300424B4">
+          <End Role="Player" Type="Self.Player" Multiplicity="1" />
+          <End Role="Game" Type="Self.Game" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="PlayerId" />
+            </Principal>
+            <Dependent Role="Game">
+              <PropertyRef Name="PlayerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PlayerFri__Playe__267ABA7A">
+          <End Role="Player" Type="Self.Player" Multiplicity="1" />
+          <End Role="PlayerFriend" Type="Self.PlayerFriend" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="PlayerId" />
+            </Principal>
+            <Dependent Role="PlayerFriend">
+              <PropertyRef Name="PlayerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PlayerFri__Playe__276EDEB3">
+          <End Role="Player" Type="Self.Player" Multiplicity="1" />
+          <End Role="PlayerFriend" Type="Self.PlayerFriend" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="PlayerId" />
+            </Principal>
+            <Dependent Role="PlayerFriend">
+              <PropertyRef Name="PlayerFriendId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PlayerGam__Block__38996AB5">
+          <End Role="Block" Type="Self.Block" Multiplicity="1" />
+          <End Role="PlayerGameBlock" Type="Self.PlayerGameBlock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Block">
+              <PropertyRef Name="BlockId" />
+            </Principal>
+            <Dependent Role="PlayerGameBlock">
+              <PropertyRef Name="BlockId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PlayerGam__GameI__33D4B598">
+          <End Role="Game" Type="Self.Game" Multiplicity="1" />
+          <End Role="PlayerGame" Type="Self.PlayerGame" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Game">
+              <PropertyRef Name="GameId" />
+            </Principal>
+            <Dependent Role="PlayerGame">
+              <PropertyRef Name="GameId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PlayerGam__Playe__32E0915F">
+          <End Role="Player" Type="Self.Player" Multiplicity="1" />
+          <End Role="PlayerGame" Type="Self.PlayerGame" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="PlayerId" />
+            </Principal>
+            <Dependent Role="PlayerGame">
+              <PropertyRef Name="PlayerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PlayerGam__Playe__37A5467C">
+          <End Role="PlayerGame" Type="Self.PlayerGame" Multiplicity="1" />
+          <End Role="PlayerGameBlock" Type="Self.PlayerGameBlock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PlayerGame">
+              <PropertyRef Name="PlayerGameId" />
+            </Principal>
+            <Dependent Role="PlayerGameBlock">
+              <PropertyRef Name="PlayerGameId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PlayerPic__Picka__2D27B809">
+          <End Role="Pickaxe" Type="Self.Pickaxe" Multiplicity="1" />
+          <End Role="PlayerPickaxe" Type="Self.PlayerPickaxe" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pickaxe">
+              <PropertyRef Name="PickaxeId" />
+            </Principal>
+            <Dependent Role="PlayerPickaxe">
+              <PropertyRef Name="PickaxeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PlayerPic__Playe__2C3393D0">
+          <End Role="Player" Type="Self.Player" Multiplicity="1" />
+          <End Role="PlayerPickaxe" Type="Self.PlayerPickaxe" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="PlayerId" />
+            </Principal>
+            <Dependent Role="PlayerPickaxe">
+              <PropertyRef Name="PlayerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MineClickerModelStoreContainer">
+          <EntitySet Name="Block" EntityType="Self.Block" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Game" EntityType="Self.Game" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pickaxe" EntityType="Self.Pickaxe" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Player" EntityType="Self.Player" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PlayerFriend" EntityType="Self.PlayerFriend" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PlayerGame" EntityType="Self.PlayerGame" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PlayerPickaxe" EntityType="Self.PlayerPickaxe" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PlayerGameBlock" EntityType="Self.PlayerGameBlock" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [PlayerGameBlock].[PlayerGameId] AS [PlayerGameId], 
+    [PlayerGameBlock].[BlockId] AS [BlockId], 
+    [PlayerGameBlock].[Destroyed] AS [Destroyed]
+    FROM [dbo].[PlayerGameBlock] AS [PlayerGameBlock]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK__Game__PlayerId__300424B4" Association="Self.FK__Game__PlayerId__300424B4">
+            <End Role="Player" EntitySet="Player" />
+            <End Role="Game" EntitySet="Game" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PlayerFri__Playe__267ABA7A" Association="Self.FK__PlayerFri__Playe__267ABA7A">
+            <End Role="Player" EntitySet="Player" />
+            <End Role="PlayerFriend" EntitySet="PlayerFriend" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PlayerFri__Playe__276EDEB3" Association="Self.FK__PlayerFri__Playe__276EDEB3">
+            <End Role="Player" EntitySet="Player" />
+            <End Role="PlayerFriend" EntitySet="PlayerFriend" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PlayerGam__Block__38996AB5" Association="Self.FK__PlayerGam__Block__38996AB5">
+            <End Role="Block" EntitySet="Block" />
+            <End Role="PlayerGameBlock" EntitySet="PlayerGameBlock" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PlayerGam__GameI__33D4B598" Association="Self.FK__PlayerGam__GameI__33D4B598">
+            <End Role="Game" EntitySet="Game" />
+            <End Role="PlayerGame" EntitySet="PlayerGame" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PlayerGam__Playe__32E0915F" Association="Self.FK__PlayerGam__Playe__32E0915F">
+            <End Role="Player" EntitySet="Player" />
+            <End Role="PlayerGame" EntitySet="PlayerGame" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PlayerGam__Playe__37A5467C" Association="Self.FK__PlayerGam__Playe__37A5467C">
+            <End Role="PlayerGame" EntitySet="PlayerGame" />
+            <End Role="PlayerGameBlock" EntitySet="PlayerGameBlock" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PlayerPic__Picka__2D27B809" Association="Self.FK__PlayerPic__Picka__2D27B809">
+            <End Role="Pickaxe" EntitySet="Pickaxe" />
+            <End Role="PlayerPickaxe" EntitySet="PlayerPickaxe" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PlayerPic__Playe__2C3393D0" Association="Self.FK__PlayerPic__Playe__2C3393D0">
+            <End Role="Player" EntitySet="Player" />
+            <End Role="PlayerPickaxe" EntitySet="PlayerPickaxe" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MineClickerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Block">
+          <Key>
+            <PropertyRef Name="BlockId" />
+          </Key>
+          <Property Name="BlockId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Value" Type="Double" Nullable="false" />
+          <Property Name="Rarity" Type="Int32" Nullable="false" />
+          <Property Name="Hardness" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="PlayerGameBlock" Relationship="Self.FK__PlayerGam__Block__38996AB5" FromRole="Block" ToRole="PlayerGameBlock" />
+        </EntityType>
+        <EntityType Name="Game">
+          <Key>
+            <PropertyRef Name="GameId" />
+          </Key>
+          <Property Name="GameId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PlayerId" Type="Int32" Nullable="false" />
+          <Property Name="CreationDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Player" Relationship="Self.FK__Game__PlayerId__300424B4" FromRole="Game" ToRole="Player" />
+          <NavigationProperty Name="PlayerGame" Relationship="Self.FK__PlayerGam__GameI__33D4B598" FromRole="Game" ToRole="PlayerGame" />
+        </EntityType>
+        <EntityType Name="Pickaxe">
+          <Key>
+            <PropertyRef Name="PickaxeId" />
+          </Key>
+          <Property Name="PickaxeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Efficiency" Type="Int32" Nullable="false" />
+          <Property Name="Price" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Player" Relationship="Self.PlayerPickaxe" FromRole="Pickaxe" ToRole="Player" />
+        </EntityType>
+        <EntityType Name="Player">
+          <Key>
+            <PropertyRef Name="PlayerId" />
+          </Key>
+          <Property Name="PlayerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Username" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Money" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Game" Relationship="Self.FK__Game__PlayerId__300424B4" FromRole="Player" ToRole="Game" />
+          <NavigationProperty Name="PlayerGame" Relationship="Self.FK__PlayerGam__Playe__32E0915F" FromRole="Player" ToRole="PlayerGame" />
+          <NavigationProperty Name="Player1" Relationship="Self.PlayerFriend" FromRole="Player" ToRole="Player1" />
+          <NavigationProperty Name="Player2" Relationship="Self.PlayerFriend" FromRole="Player1" ToRole="Player" />
+          <NavigationProperty Name="Pickaxe" Relationship="Self.PlayerPickaxe" FromRole="Player" ToRole="Pickaxe" />
+        </EntityType>
+        <EntityType Name="PlayerGame">
+          <Key>
+            <PropertyRef Name="PlayerGameId" />
+          </Key>
+          <Property Name="PlayerGameId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PlayerId" Type="Int32" Nullable="false" />
+          <Property Name="GameId" Type="Int32" Nullable="false" />
+          <Property Name="EarnedMoney" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Game" Relationship="Self.FK__PlayerGam__GameI__33D4B598" FromRole="PlayerGame" ToRole="Game" />
+          <NavigationProperty Name="Player" Relationship="Self.FK__PlayerGam__Playe__32E0915F" FromRole="PlayerGame" ToRole="Player" />
+          <NavigationProperty Name="PlayerGameBlock" Relationship="Self.FK__PlayerGam__Playe__37A5467C" FromRole="PlayerGame" ToRole="PlayerGameBlock" />
+        </EntityType>
+        <EntityType Name="PlayerGameBlock">
+          <Key>
+            <PropertyRef Name="PlayerGameId" />
+            <PropertyRef Name="BlockId" />
+            <PropertyRef Name="Destroyed" />
+          </Key>
+          <Property Name="PlayerGameId" Type="Int32" Nullable="false" />
+          <Property Name="BlockId" Type="Int32" Nullable="false" />
+          <Property Name="Destroyed" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Block" Relationship="Self.FK__PlayerGam__Block__38996AB5" FromRole="PlayerGameBlock" ToRole="Block" />
+          <NavigationProperty Name="PlayerGame" Relationship="Self.FK__PlayerGam__Playe__37A5467C" FromRole="PlayerGameBlock" ToRole="PlayerGame" />
+        </EntityType>
+        <Association Name="FK__PlayerGam__Block__38996AB5">
+          <End Role="Block" Type="Self.Block" Multiplicity="1" />
+          <End Role="PlayerGameBlock" Type="Self.PlayerGameBlock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Block">
+              <PropertyRef Name="BlockId" />
+            </Principal>
+            <Dependent Role="PlayerGameBlock">
+              <PropertyRef Name="BlockId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Game__PlayerId__300424B4">
+          <End Role="Player" Type="Self.Player" Multiplicity="1" />
+          <End Role="Game" Type="Self.Game" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="PlayerId" />
+            </Principal>
+            <Dependent Role="Game">
+              <PropertyRef Name="PlayerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PlayerGam__GameI__33D4B598">
+          <End Role="Game" Type="Self.Game" Multiplicity="1" />
+          <End Role="PlayerGame" Type="Self.PlayerGame" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Game">
+              <PropertyRef Name="GameId" />
+            </Principal>
+            <Dependent Role="PlayerGame">
+              <PropertyRef Name="GameId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PlayerGam__Playe__32E0915F">
+          <End Role="Player" Type="Self.Player" Multiplicity="1" />
+          <End Role="PlayerGame" Type="Self.PlayerGame" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="PlayerId" />
+            </Principal>
+            <Dependent Role="PlayerGame">
+              <PropertyRef Name="PlayerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PlayerGam__Playe__37A5467C">
+          <End Role="PlayerGame" Type="Self.PlayerGame" Multiplicity="1" />
+          <End Role="PlayerGameBlock" Type="Self.PlayerGameBlock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PlayerGame">
+              <PropertyRef Name="PlayerGameId" />
+            </Principal>
+            <Dependent Role="PlayerGameBlock">
+              <PropertyRef Name="PlayerGameId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PlayerFriend">
+          <End Role="Player" Type="Self.Player" Multiplicity="*" />
+          <End Role="Player1" Type="Self.Player" Multiplicity="*" />
+        </Association>
+        <Association Name="PlayerPickaxe">
+          <End Role="Pickaxe" Type="Self.Pickaxe" Multiplicity="*" />
+          <End Role="Player" Type="Self.Player" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="MineClickerEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Block" EntityType="Self.Block" />
+          <EntitySet Name="Game" EntityType="Self.Game" />
+          <EntitySet Name="Pickaxe" EntityType="Self.Pickaxe" />
+          <EntitySet Name="Player" EntityType="Self.Player" />
+          <EntitySet Name="PlayerGame" EntityType="Self.PlayerGame" />
+          <EntitySet Name="PlayerGameBlock" EntityType="Self.PlayerGameBlock" />
+          <AssociationSet Name="FK__PlayerGam__Block__38996AB5" Association="Self.FK__PlayerGam__Block__38996AB5">
+            <End Role="Block" EntitySet="Block" />
+            <End Role="PlayerGameBlock" EntitySet="PlayerGameBlock" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Game__PlayerId__300424B4" Association="Self.FK__Game__PlayerId__300424B4">
+            <End Role="Player" EntitySet="Player" />
+            <End Role="Game" EntitySet="Game" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PlayerGam__GameI__33D4B598" Association="Self.FK__PlayerGam__GameI__33D4B598">
+            <End Role="Game" EntitySet="Game" />
+            <End Role="PlayerGame" EntitySet="PlayerGame" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PlayerGam__Playe__32E0915F" Association="Self.FK__PlayerGam__Playe__32E0915F">
+            <End Role="Player" EntitySet="Player" />
+            <End Role="PlayerGame" EntitySet="PlayerGame" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PlayerGam__Playe__37A5467C" Association="Self.FK__PlayerGam__Playe__37A5467C">
+            <End Role="PlayerGame" EntitySet="PlayerGame" />
+            <End Role="PlayerGameBlock" EntitySet="PlayerGameBlock" />
+          </AssociationSet>
+          <AssociationSet Name="PlayerFriend" Association="Self.PlayerFriend">
+            <End Role="Player" EntitySet="Player" />
+            <End Role="Player1" EntitySet="Player" />
+          </AssociationSet>
+          <AssociationSet Name="PlayerPickaxe" Association="Self.PlayerPickaxe">
+            <End Role="Pickaxe" EntitySet="Pickaxe" />
+            <End Role="Player" EntitySet="Player" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MineClickerModelStoreContainer" CdmEntityContainer="MineClickerEntities">
+          <EntitySetMapping Name="Block">
+            <EntityTypeMapping TypeName="MineClickerModel.Block">
+              <MappingFragment StoreEntitySet="Block">
+                <ScalarProperty Name="BlockId" ColumnName="BlockId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="Rarity" ColumnName="Rarity" />
+                <ScalarProperty Name="Hardness" ColumnName="Hardness" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Game">
+            <EntityTypeMapping TypeName="MineClickerModel.Game">
+              <MappingFragment StoreEntitySet="Game">
+                <ScalarProperty Name="GameId" ColumnName="GameId" />
+                <ScalarProperty Name="PlayerId" ColumnName="PlayerId" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pickaxe">
+            <EntityTypeMapping TypeName="MineClickerModel.Pickaxe">
+              <MappingFragment StoreEntitySet="Pickaxe">
+                <ScalarProperty Name="PickaxeId" ColumnName="PickaxeId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Efficiency" ColumnName="Efficiency" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Player">
+            <EntityTypeMapping TypeName="MineClickerModel.Player">
+              <MappingFragment StoreEntitySet="Player">
+                <ScalarProperty Name="PlayerId" ColumnName="PlayerId" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Money" ColumnName="Money" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PlayerGame">
+            <EntityTypeMapping TypeName="MineClickerModel.PlayerGame">
+              <MappingFragment StoreEntitySet="PlayerGame">
+                <ScalarProperty Name="PlayerGameId" ColumnName="PlayerGameId" />
+                <ScalarProperty Name="PlayerId" ColumnName="PlayerId" />
+                <ScalarProperty Name="GameId" ColumnName="GameId" />
+                <ScalarProperty Name="EarnedMoney" ColumnName="EarnedMoney" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PlayerGameBlock">
+            <EntityTypeMapping TypeName="MineClickerModel.PlayerGameBlock">
+              <MappingFragment StoreEntitySet="PlayerGameBlock">
+                <ScalarProperty Name="PlayerGameId" ColumnName="PlayerGameId" />
+                <ScalarProperty Name="BlockId" ColumnName="BlockId" />
+                <ScalarProperty Name="Destroyed" ColumnName="Destroyed" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="PlayerFriend" TypeName="MineClickerModel.PlayerFriend" StoreEntitySet="PlayerFriend">
+            <EndProperty Name="Player">
+              <ScalarProperty Name="PlayerId" ColumnName="PlayerId" />
+            </EndProperty>
+            <EndProperty Name="Player1">
+              <ScalarProperty Name="PlayerId" ColumnName="PlayerFriendId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="PlayerPickaxe" TypeName="MineClickerModel.PlayerPickaxe" StoreEntitySet="PlayerPickaxe">
+            <EndProperty Name="Pickaxe">
+              <ScalarProperty Name="PickaxeId" ColumnName="PickaxeId" />
+            </EndProperty>
+            <EndProperty Name="Player">
+              <ScalarProperty Name="PlayerId" ColumnName="PlayerId" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

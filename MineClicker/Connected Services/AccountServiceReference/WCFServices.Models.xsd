@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WCFServices.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCFServices.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="Player">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Money" type="xs:float" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlayerId" type="xs:int" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Player" nillable="true" type="tns:Player" />
+  <xs:complexType name="ArrayOfGlobalUserStats">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GlobalUserStats" type="tns:GlobalUserStats" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGlobalUserStats" nillable="true" type="tns:ArrayOfGlobalUserStats" />
+  <xs:complexType name="GlobalUserStats">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TotalWins" type="xs:int" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GlobalUserStats" nillable="true" type="tns:GlobalUserStats" />
+  <xs:complexType name="PersonalUserStats">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DestroyedBlocks" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="MaterialsDestroyed" nillable="true" type="q1:ArrayOfKeyValueOfstringint" />
+      <xs:element minOccurs="0" name="Money" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PersonalUserStats" nillable="true" type="tns:PersonalUserStats" />
+  <xs:complexType name="ArrayOfFriendUserStats">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FriendUserStats" type="tns:FriendUserStats" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFriendUserStats" nillable="true" type="tns:ArrayOfFriendUserStats" />
+  <xs:complexType name="FriendUserStats">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TotalWins" type="xs:int" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FriendUserStats" nillable="true" type="tns:FriendUserStats" />
+</xs:schema>

@@ -4,10 +4,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MineClicker", "MineClicker.csproj", "{C58B9B9B-4A1B-4A3A-A4EB-4BABED96CD42}"
+	ProjectSection(ProjectDependencies) = postProject
+		{073199CA-8C00-434D-9DF4-47D04AC67726} = {073199CA-8C00-434D-9DF4-47D04AC67726}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatosClicker", "..\DatosClicker\DatosClicker.csproj", "{958BE9D2-E38B-4861-B199-1F750A7D2DAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicioWCF", "..\ServicioWCF\ServicioWCF.csproj", "{073199CA-8C00-434D-9DF4-47D04AC67726}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFServices", "..\ServicioWCF\WCFServices.csproj", "{073199CA-8C00-434D-9DF4-47D04AC67726}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

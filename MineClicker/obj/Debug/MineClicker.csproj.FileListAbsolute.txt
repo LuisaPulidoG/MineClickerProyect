@@ -42,6 +42,20 @@ E:\Proyectos Visual Studio\repos\MineClickerTecno\MineClicker\obj\Debug\es-MX\Mi
 E:\Proyectos Visual Studio\repos\MineClickerTecno\MineClicker\obj\Debug\MineClicker.csproj.CopyComplete
 E:\Proyectos Visual Studio\repos\MineClickerTecno\MineClicker\obj\Debug\MineClicker.exe
 E:\Proyectos Visual Studio\repos\MineClickerTecno\MineClicker\obj\Debug\MineClicker.pdb
+C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\MineClicker.csproj.AssemblyReference.cache
+C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\ChatJugadores.g.cs
+C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\GameConfiguration.g.cs
+C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\Stats.g.cs
+C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\MainWindow.g.cs
+C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\SendInvitation.g.cs
+C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\PlayerRegister.g.cs
+C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\LogIn.g.cs
+C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\Store.g.cs
+C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\App.g.cs
+C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\MineClicker_Content.g.cs
+C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\MineClicker_MarkupCompile.cache
+C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\MineClicker_MarkupCompile.lref
+C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\bin\Debug\MineClicker.exe.config
 C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\bin\Debug\MineClicker.exe
 C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\bin\Debug\MineClicker.pdb
 C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\bin\Debug\ja-JP\MineClicker.resources.dll
@@ -52,31 +66,17 @@ C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\bin\Deb
 C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\bin\Debug\MaterialDesignColors.pdb
 C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\bin\Debug\MaterialDesignThemes.Wpf.xml
-C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\MineClicker.csproj.AssemblyReference.cache
-C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\ChatJugadores.g.cs
-C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\ConfiguracionJuego.g.cs
-C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\EstadisticasJugador.g.cs
-C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\IniciarMultijugador.g.cs
-C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\PantallaPrincipal.g.cs
-C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\MandarInvitacion.g.cs
-C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\RegistrarJugador.g.cs
-C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\IniciarSesion.g.cs
-C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\TiendaPicos.g.cs
-C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\App.g.cs
-C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\MineClicker_Content.g.cs
-C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\MineClicker_MarkupCompile.cache
-C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\MineClicker_MarkupCompile.lref
 C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\ChatJugadores.baml
-C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\ConfiguracionJuego.baml
-C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\EstadisticasJugador.baml
-C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\IniciarMultijugador.baml
-C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\PantallaPrincipal.baml
-C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\MandarInvitacion.baml
-C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\RegistrarJugador.baml
-C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\IniciarSesion.baml
-C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\TiendaPicos.baml
+C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\GameConfiguration.baml
+C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\Stats.baml
+C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\MainWindow.baml
+C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\SendInvitation.baml
+C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\PlayerRegister.baml
+C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\LogIn.baml
+C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\Store.baml
 C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\MineClicker.g.resources
 C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\MineClicker.Properties.Resources.resources
+C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\MineClicker.Properties.SoundResources.resources
 C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\MineClicker.Properties.Resources.ja-JP.resources
 C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\MineClicker.Properties.Resources.es-MX.resources
 C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\MineClicker.csproj.GenerateResource.cache
@@ -86,4 +86,3 @@ C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Deb
 C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\MineClicker.csproj.CopyComplete
 C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\MineClicker.exe
 C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\MineClicker.pdb
-C:\Users\luisa\Source\Repos\Samytheturtle\MineClickerProyect\MineClicker\obj\Debug\MineClicker.Properties.SoundResources.resources
