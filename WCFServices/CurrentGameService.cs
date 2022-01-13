@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DatosClicker;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -12,9 +13,8 @@ namespace WCFServices {
         private List<int> waitingQueue = new List<int>();
         private Dictionary<int, ICurrentGameServiceCallback> clients = new Dictionary<int, ICurrentGameServiceCallback>();
         private Dictionary<string, Dictionary<int, ICurrentGameServiceCallback>> currentGames = new Dictionary<string, Dictionary<int, ICurrentGameServiceCallback>>();
-        public void StartGame(string gameGUID) {
-           
-        }
+        private Dictionary<string, Dictionary<int, List <Models.Block>>> finishedGames = new Dictionary<string, Dictionary<int, List<Models.Block>>>();
+        
         public void SetPlayerInWaitingQueue(int playerID) {
             if (waitingQueue.Count == 0) {
                 waitingQueue.Add(playerID);
@@ -35,6 +35,63 @@ namespace WCFServices {
             clients[playerID1].StartGameCallback(id);
             clients[playerID2].StartGameCallback(id);
             return id;
+        }
+        public void SendDestroyedBlocks(List<Models.Block> destroyedBlocks, string guid, int playerID) {
+            var game = currentGames.FirstOrDefault(x => x.Key == guid);
+            if (finishedGames.ContainsKey(guid)) {
+                finishedGames[guid].Add(playerID, destroyedBlocks);
+            } else { 
+                finishedGames.Add(guid, new Dictionary<int, List<Models.Block>>() {
+                    {playerID, destroyedBlocks }
+                });
+            }
+            currentGames[guid][playerID] = OperationContext.Current.GetCallbackChannel<ICurrentGameServiceCallback>();
+            if (finishedGames[guid].Count == currentGames[guid].Count) {
+                RegisterGame(guid);
+            }
+        }
+        private void RegisterGame(string guid) {
+            using (MineClickerEntities db = new MineClickerEntities()) {
+                Game newGame = new Game {
+                    CreationDate = DateTime.Now
+                };
+                var gamePlayers = finishedGames[guid];
+                var playerWinnerID = 0;
+                var highestDestroyedBlocks = 0;
+                var currentDestroyedBlocks = 0;
+                foreach (var player in gamePlayers) {
+                    var playerGaming = new PlayerGame() {
+                        Game = newGame,
+                        PlayerId = player.Key
+                    };
+                    List<PlayerGameBlock> playerGameBlocks = new List<PlayerGameBlock>();
+                    foreach(var block in player.Value) {
+                        var playerGameBlock = playerGameBlocks.FirstOrDefault(x => x.BlockId == block.BlockID);
+                        if(playerGameBlock == null) {
+                            playerGameBlocks.Add(new PlayerGameBlock {
+                                PlayerGame = playerGaming,
+                                BlockId = block.BlockID,
+                                Destroyed = 1
+                            });
+                        } else {
+                            playerGameBlock.Destroyed++;
+                        }
+                        currentDestroyedBlocks++;
+                    }
+                    newGame.PlayerGame.Add(playerGaming);
+                    if(currentDestroyedBlocks > highestDestroyedBlocks) {
+                        playerWinnerID = player.Key;
+                    }
+                }
+                newGame.PlayerId = playerWinnerID;
+                db.Game.Add(newGame);
+                db.SaveChanges();
+                finishedGames.Remove(guid);
+                var playerWinner = db.Player.Find(playerWinnerID);
+                foreach(var player in currentGames[guid]) {
+                    player.Value.EndGame(playerWinner.Username);
+                }
+            }
         }
     }
 

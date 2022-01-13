@@ -22,6 +22,8 @@ namespace WCFServices.Models {
         [DataMember]
         public string Name { get; set; }
 
+        public Player() { }
+
         public Player(DatosClicker.Player player) {
             PlayerId = player.PlayerId;
             Username = player.Username;

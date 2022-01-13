@@ -90,19 +90,23 @@
                 <DropShadowEffect BlurRadius="12" Opacity="0.685"/>
             </Button.Effect>
         </Button>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="97" Margin="182,0,0,0" Stroke="Black" VerticalAlignment="Top" Width="541" StrokeThickness="4" RadiusY="36" RadiusX="36"/>
-        <Label Content="{x:Static p:Resources.DestroyedBlocks}" HorizontalAlignment="Left" Margin="203,6,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="32" Width="157" FontSize="16"/>
-        <Label Content="{x:Static p:Resources.Coins}" HorizontalAlignment="Left" Margin="203,28,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="32" Width="82" FontSize="16"/>
-        <Label Content="{x:Static p:Resources.CountClicks}" HorizontalAlignment="Left" Margin="203,54,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="32" Width="82" FontSize="16"/>
-        <Button HorizontalAlignment="Left" Margin="262,114,0,0" VerticalAlignment="Top" Width="290" Height="290" Click="BreakBlockBtn">
-            <Image x:Name="ImagenChange"  HorizontalAlignment="Left" Height="290" VerticalAlignment="Top" Width="290"/>
-        </Button>
-        <TextBox x:Name="ClicsPorSegundo" HorizontalAlignment="Left" Height="23" Margin="278,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="402" RenderTransformOrigin="0.475,0.522" Background="{x:Null}" FontWeight="Bold" FontSize="14" IsReadOnly="True" Text="0" BorderBrush="{x:Null}"/>
-        <TextBox x:Name="DineroObtenido" HorizontalAlignment="Left" Height="20" Margin="278,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="403" RenderTransformOrigin="0.475,0.522" Background="{x:Null}" FontWeight="Bold" FontSize="14" Text="0" BorderBrush="{x:Null}" IsReadOnly="True"/>
         <TextBox x:Name="bloquesdestruidos" HorizontalAlignment="Left" Height="23" Margin="360,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="332" RenderTransformOrigin="0.475,0.522" Background="{x:Null}" FontWeight="Bold" FontSize="14" Text="0" BorderBrush="{x:Null}" IsReadOnly="True"/>
-        <Rectangle x:Name="CuadroDeCambioPico" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="112" Margin="632,130,0,0" Stroke="Black" VerticalAlignment="Top" Width="116" RadiusY="28.5" RadiusX="28.5"/>
-        <Button Content="&lt;--" HorizontalAlignment="Left" Margin="569,171,0,0" VerticalAlignment="Top" Width="40" Height="40" FontSize="22" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontWeight="Bold" Click="ChangeLeftBtn"/>
-        <Button Content="-->" HorizontalAlignment="Left" Margin="768,171,0,0" VerticalAlignment="Top" Width="40" Height="40" FontWeight="Bold" FontSize="22" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" Click="ChangeRightBtn" />
+        <Rectangle x:Name="CuadroDeCambioPico" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="94" Margin="640,341,0,0" Stroke="Black" VerticalAlignment="Top" Width="100" RadiusY="28.5" RadiusX="28.5"/>
+        <Button Content="&lt;--" HorizontalAlignment="Left" Margin="587,360,0,0" VerticalAlignment="Top" Width="40" Height="40" FontSize="22" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontWeight="Bold" Click="ChangeLeftBtn" RenderTransformOrigin="-0.504,0.533"/>
+        <Button Content="-->" HorizontalAlignment="Left" Margin="752,360,0,0" VerticalAlignment="Top" Width="40" Height="40" FontWeight="Bold" FontSize="22" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" Click="ChangeRightBtn" />
+        <StackPanel x:Name="FriendsList" HorizontalAlignment="Left" Height="248" Margin="526,41,0,0" VerticalAlignment="Top" Orientation="Vertical" Width="226" Background="{x:Null}"/>
+        <ListBox x:Name="CajadeListaMensajes" HorizontalAlignment="Left" Height="313" Margin="145,41,0,0" VerticalAlignment="Top" Width="365"/>
+        <TextBox x:Name="CajadeTextoMensaje" HorizontalAlignment="Left" Height="35" Margin="145,358,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="323"/>
+        <Button Content="Enviar" HorizontalAlignment="Left" Margin="471,358,0,0" VerticalAlignment="Top" Width="39" Height="35" Foreground="White" BorderBrush="White" >
+            <Button.Background>
+                <ImageBrush ImageSource="Sourse_Imagen/IconoEnviarMensaje.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="Chat global" HorizontalAlignment="Left" Margin="526,294,0,0" VerticalAlignment="Top" Width="101" Height="27" Foreground="White" FontSize="18" Click="BotonChatGeneral">
+            <Button.Background>
+                <ImageBrush ImageSource="Sourse_Imagen/TexturaBotonChatGlobal.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Window>

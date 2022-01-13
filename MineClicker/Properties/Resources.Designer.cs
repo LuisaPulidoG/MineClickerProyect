@@ -421,7 +421,25 @@ namespace MineClicker.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Nickname.
+        ///   Busca una cadena traducida similar a Create an account.
+        /// </summary>
+        public static string NewAccountButton {
+            get {
+                return ResourceManager.GetString("NewAccountButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Doesn´t have an account yet?.
+        /// </summary>
+        public static string NewAccountMessage {
+            get {
+                return ResourceManager.GetString("NewAccountMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Username.
         /// </summary>
         public static string Nickname {
             get {
@@ -529,6 +547,24 @@ namespace MineClicker.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a The username or email are already registered.
+        /// </summary>
+        public static string RegisterFailMessage {
+            get {
+                return ResourceManager.GetString("RegisterFailMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Player registered successfully.
+        /// </summary>
+        public static string RegisterMessage {
+            get {
+                return ResourceManager.GetString("RegisterMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Second Name.
         /// </summary>
         public static string SecondName {
@@ -610,6 +646,15 @@ namespace MineClicker.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Multiplayer.
+        /// </summary>
+        public static string TitleMultiplayer {
+            get {
+                return ResourceManager.GetString("TitleMultiplayer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a User Register.
         /// </summary>
         public static string TitleRegister {
@@ -624,6 +669,42 @@ namespace MineClicker.Properties {
         public static string TitleStore {
             get {
                 return ResourceManager.GetString("TitleStore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Waiting Game.
+        /// </summary>
+        public static string TitleWaitingWindow {
+            get {
+                return ResourceManager.GetString("TitleWaitingWindow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Winner.
+        /// </summary>
+        public static string TitleWinnerWindow {
+            get {
+                return ResourceManager.GetString("TitleWinnerWindow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Waiting for a partner to join the game....
+        /// </summary>
+        public static string WaitingMessage {
+            get {
+                return ResourceManager.GetString("WaitingMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a The winner is: .
+        /// </summary>
+        public static string WinnerMessage {
+            get {
+                return ResourceManager.GetString("WinnerMessage", resourceCulture);
             }
         }
     }

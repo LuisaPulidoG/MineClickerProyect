@@ -45,10 +45,15 @@ namespace WCFServices {
                 var materials = (from pgb in db.PlayerGameBlock
                                 join pg in db.PlayerGame on pgb.PlayerGameId equals pg.PlayerGameId
                                 join b in db.Block on pgb.BlockId equals b.BlockId
+                                where pg.PlayerId == playerId 
                                  group pgb by new { pg.PlayerId, pgb.BlockId, b.Name } into g
                                  select new { blockName = g.Key.Name, totalDestroyed=g.Sum(x => x.Destroyed)}
                     ).ToList();
-                var totalMoney = db.PlayerGame.Where(x => x.PlayerId == playerId).GroupBy(g => g.PlayerId).Select(x => new { totalEarnings = x.Sum(i => i.EarnedMoney) }).FirstOrDefault().totalEarnings;
+                var playerGame = db.PlayerGame.Where(x => x.PlayerId == playerId).GroupBy(g => g.PlayerId).Select(x => new { totalEarnings = x.Sum(i => i.EarnedMoney) }).FirstOrDefault();
+                var totalMoney = 0.0;
+                if(playerGame != null) {
+                    totalMoney = playerGame.totalEarnings;
+                }
                 var stats = new PersonalUserStats {
                     DestroyedBlocks = 0,
                     MaterialsDestroyed = new Dictionary<string, int>(),
@@ -84,6 +89,33 @@ namespace WCFServices {
                 return list;
             }
 
+        }
+        public List<Models.Player> GetFriends(int playerId) {
+            using (MineClickerEntities db = new MineClickerEntities()) {
+                var player = db.Player.Where(x => x.PlayerId == playerId).FirstOrDefault();
+                var friends = new List<Models.Player>();
+                foreach (var friend in player.Player1) {
+                    friends.Add(new Models.Player(friend));
+                }
+                return friends;
+            }
+        }
+        public void RegisterPlayer(Models.Player player) {
+            using (MineClickerEntities db = new MineClickerEntities()) {
+                var playerSearch = db.Player.Where(x => x.Username == player.Username || x.Email == player.Email);
+                if (playerSearch.Count() > 0){
+                    throw new FaultException("The player already exists");
+                }
+                var newPlayer = new DatosClicker.Player {
+                    Name = player.Name,
+                    Username = player.Username,
+                    Email = player.Email,
+                    Password = BCrypt.Net.BCrypt.HashPassword(player.Password),
+                    Money = 0
+                };
+                db.Player.Add(newPlayer);
+                db.SaveChanges();
+            }
         }
     }
 

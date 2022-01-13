@@ -18,5 +18,9 @@ namespace WCFServices {
         PersonalUserStats GetPersonalStats(int playerId);
         [OperationContract]
         List<FriendUserStats> GetFriendsStats(int playerId);
+        [OperationContract]
+        List<Player> GetFriends(int playerId);
+        [OperationContract]
+        void RegisterPlayer(Models.Player player);
     }
 }

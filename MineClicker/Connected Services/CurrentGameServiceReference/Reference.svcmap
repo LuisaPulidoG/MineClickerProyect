@@ -25,6 +25,7 @@
     <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="fe8e93e3-b571-4e25-aca2-8e9fa0fa4e5e" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ServicioWCF/CurrentGameService/mex" />
     <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="20a3f8a4-2649-4dce-b5f1-985ed3a3e2a4" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ServicioWCF/CurrentGameService/mex" />
     <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="f4c1449b-b391-494e-b852-ac0331a964f0" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ServicioWCF/CurrentGameService/mex" />
+    <MetadataFile FileName="WCFServices.Models.xsd" MetadataType="Schema" ID="b5e3339d-9c8d-4c23-bbd1-9417921cfbbc" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ServicioWCF/CurrentGameService/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

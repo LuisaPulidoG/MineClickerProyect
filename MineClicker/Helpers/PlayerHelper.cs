@@ -22,5 +22,11 @@ namespace MineClicker.Helpers {
         public static PersonalUserStats GetPersonalUserStats() {
             return client.GetPersonalStats(Session.Player.PlayerId);
         }
+        public static Player[] GetFriends() {
+            return client.GetFriends(Session.Player.PlayerId);
+        }
+        public static void PlayerRegister(Player newPlayer) {
+            client.RegisterPlayer(newPlayer);
+        }
     }
 }

@@ -48,6 +48,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml" />
@@ -90,7 +91,16 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="EmailSender\EmailSenderSMTP.cs" />
+    <Compile Include="Helpers\BlockHelper.cs" />
     <Compile Include="Helpers\CurrentGameCallbackHandler.cs" />
+    <Compile Include="Multiplayer.xaml.cs">
+      <DependentUpon>Multiplayer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\ImageResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ImageResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Stats.xaml.cs">
       <DependentUpon>Stats.xaml</DependentUpon>
     </Compile>
@@ -126,6 +136,9 @@
       <DependentUpon>Store.xaml</DependentUpon>
     </Compile>
     <Compile Include="Validadores\ValidadorEntrada.cs" />
+    <Compile Include="ShowWinnerWindow.xaml.cs">
+      <DependentUpon>ShowWinnerWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WaitingGameWindow.xaml.cs">
       <DependentUpon>WaitingGameWindow.xaml</DependentUpon>
     </Compile>
@@ -134,6 +147,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="GameConfiguration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Multiplayer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -169,6 +186,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ShowWinnerWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="WaitingGameWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -188,6 +209,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Properties\ImageResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ImageResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.ja-JP.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.ja-JP.Designer.cs</LastGenOutput>
@@ -226,11 +251,21 @@
     <None Include="Connected Services\CurrentGameServiceReference\service1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\CurrentGameServiceReference\WCFServices.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\GameServiceReference\service.wsdl" />
     <None Include="Connected Services\GameServiceReference\service.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\GameServiceReference\service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\GameServiceReference\WCFServices.Models.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\WCFServices.Models.Block.datasource" />
     <None Include="Properties\DataSources\WCFServices.Models.FriendUserStats.datasource" />
     <None Include="Properties\DataSources\WCFServices.Models.GlobalUserStats.datasource" />
     <None Include="Properties\DataSources\WCFServices.Models.PersonalUserStats.datasource" />
@@ -279,6 +314,15 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Resources\Coal.bmp" />
+    <None Include="Resources\LeadBlock.bmp" />
+    <None Include="Resources\lead.png" />
+    <None Include="Resources\LeadBlock.png" />
+    <None Include="Resources\SilverBlock.png" />
+    <None Include="Resources\GoldBlock.png" />
+    <None Include="Resources\DiamondBlock.png" />
+    <None Include="Resources\PlatinumBlock.png" />
+    <None Include="Resources\FluoriteBlock.png" />
     <Content Include="Sourse_Imagen\RomperBloquewav.wav" />
     <Resource Include="Sourse_Imagen\TexturaBotonChatGlobal.png" />
     <Resource Include="Sourse_Imagen\TexturaFondoInicioSesion.jpg" />

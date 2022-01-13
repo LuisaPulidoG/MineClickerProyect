@@ -13,28 +13,21 @@
             <ColumnDefinition Width="475*"/>
             <ColumnDefinition Width="222*"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name = "textBox" HorizontalAlignment = "Left" Height = "23" 
-         Margin = "27,124,0,0" TextWrapping = "Wrap" VerticalAlignment = "Top" Width = "304"/>
-        <TextBox x:Name = "textBox_Copy" HorizontalAlignment = "Left" Height = "23" 
-            Margin = "368,124,0,0" TextWrapping = "Wrap" VerticalAlignment = "Top" Width = "304" Grid.ColumnSpan="2"/>
-        <TextBox x:Name = "textBox_Copy1" HorizontalAlignment = "Left" Height = "23" 
-            Margin = "27,203,0,0" TextWrapping = "Wrap" VerticalAlignment = "Top" Width = "304"/>
-        <TextBox x:Name = "textBox_Copy2" HorizontalAlignment = "Left" Height = "23" 
-            Margin = "368,203,0,0" TextWrapping = "Wrap" VerticalAlignment = "Top" Width = "304" Grid.ColumnSpan="2"/>
-        <TextBox x:Name = "textBox_Copy3" HorizontalAlignment = "Left" Height = "23" 
-            Margin = "27,284,0,0" TextWrapping = "Wrap" VerticalAlignment = "Top" Width = "304"/>
-        <TextBox x:Name = "textBox_Copy4" HorizontalAlignment = "Left" Height = "23" 
-            Margin = "368,284,0,0" TextWrapping = "Wrap" VerticalAlignment = "Top" Width = "304" Grid.ColumnSpan="2"/>
-        <Button Content="{x:Static p:Resources.AcceptButton}" HorizontalAlignment="Left" Margin="191,383,0,0" VerticalAlignment="Top" Width="75" />
-        <Button Content="{x:Static p:Resources.CancelButton}" HorizontalAlignment="Left" Margin="314,383,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="{x:Static p:Resources.HelpButton}" HorizontalAlignment="Left" Margin="446,383,0,0" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2"/>
-        <Label Content="{x:Static p:Resources.FirstName}"  HorizontalAlignment="Left" Margin="145,172,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label Content="{x:Static p:Resources.Name}" HorizontalAlignment="Left" Margin="156,90,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label Content="{x:Static p:Resources.EmailLogin}"  HorizontalAlignment="Left" Margin="26,172,0,0" VerticalAlignment="Top" Grid.Column="1" Foreground="White"/>
-        <Label Content="{x:Static p:Resources.PasswordLogin }"  HorizontalAlignment="Left" Margin="10,253,0,0" VerticalAlignment="Top" Grid.Column="1" Foreground="White"/>
-        <Label Content="{x:Static p:Resources.SecondName }"  HorizontalAlignment="Left" Margin="145,253,0,0" VerticalAlignment="Top" Width="78" Foreground="White"/>
-        <Label Content="{x:Static p:Resources.Nickname}"  HorizontalAlignment="Left" Margin="23,90,0,0" VerticalAlignment="Top" Grid.Column="1" Foreground="White"/>
-        <Image x:Name="ImagenTitulo" HorizontalAlignment="Left" Height="61" Margin="181,10,0,0" VerticalAlignment="Top" Width="331" Grid.ColumnSpan="2" Source="Sourse_Imagen/TituloOriginal.png"/>
+        <TextBox x:Name = "Name" HorizontalAlignment = "Left" Height = "23" 
+         Margin = "31,184,0,0" TextWrapping = "Wrap" VerticalAlignment = "Top" Width = "304"/>
+        <TextBox x:Name = "Username" HorizontalAlignment = "Left" Height = "23" 
+            Margin = "372,184,0,0" TextWrapping = "Wrap" VerticalAlignment = "Top" Width = "304" Grid.ColumnSpan="2"/>
+        <TextBox x:Name = "Email" HorizontalAlignment = "Left" Height = "23" 
+            Margin = "32,263,0,0" TextWrapping = "Wrap" VerticalAlignment = "Top" Width = "304"/>
+        <TextBox x:Name = "Password" HorizontalAlignment = "Left" Height = "23" 
+            Margin = "372,262,0,0" TextWrapping = "Wrap" VerticalAlignment = "Top" Width = "304" Grid.ColumnSpan="2"/>
+        <Button Click ="AcceptButton" Content="{x:Static p:Resources.AcceptButton}" HorizontalAlignment="Left" Margin="243,383,0,0" VerticalAlignment="Top" Width="75" />
+        <Button Click ="CancelButton" Content="{x:Static p:Resources.CancelButton}" HorizontalAlignment="Left" Margin="366,383,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="{x:Static p:Resources.Name}" HorizontalAlignment="Left" Margin="160,150,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="{x:Static p:Resources.EmailLogin}"  HorizontalAlignment="Left" Margin="166,232,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="{x:Static p:Resources.PasswordLogin }"  HorizontalAlignment="Left" Margin="14,231,0,0" VerticalAlignment="Top" Grid.Column="1" Foreground="White"/>
+        <Label Content="{x:Static p:Resources.Nickname}"  HorizontalAlignment="Left" Margin="27,150,0,0" VerticalAlignment="Top" Grid.Column="1" Foreground="White"/>
+        <Image x:Name="ImagenTitulo" HorizontalAlignment="Left" Height="61" Margin="202,41,0,0" VerticalAlignment="Top" Width="331" Grid.ColumnSpan="2" Source="Sourse_Imagen/TituloOriginal.png"/>
 
 
     </Grid>

@@ -30,17 +30,17 @@ namespace MineClicker {
 
 
 
-        private void BotonCancelar(object sender, RoutedEventArgs e) {
+        private void CancelButton(object sender, RoutedEventArgs e) {
             this.username = String.Empty;
             this.password = String.Empty;
             this.Close();
 
         }
 
-        private void LogInBtn(object sender, RoutedEventArgs e) {
-            if (!String.IsNullOrEmpty(CajatxNombreUsuario.Text) && !String.IsNullOrEmpty(CajaContrasenia.Password)) {
-                this.username = CajatxNombreUsuario.Text;
-                this.password = CajaContrasenia.Password;
+        private void LogInButton(object sender, RoutedEventArgs e) {
+            if (!String.IsNullOrEmpty(Username.Text) && !String.IsNullOrEmpty(Password.Password)) {
+                this.username = Username.Text;
+                this.password = Password.Password;
                 try {
                     var player = PlayerHelper.LogIn(username, password);
                     Session.Player = player;
@@ -50,8 +50,8 @@ namespace MineClicker {
                 }
 
                 MainWindow IniciarPantallaPrincipal = new MainWindow();
-                IniciarPantallaPrincipal.UserName = CajatxNombreUsuario.Text;
-                IniciarPantallaPrincipal.UserPassword = CajaContrasenia.Password;
+                IniciarPantallaPrincipal.UserName = Username.Text;
+                IniciarPantallaPrincipal.UserPassword = Password.Password;
                 this.Close();
                 IniciarPantallaPrincipal.ShowDialog();
 

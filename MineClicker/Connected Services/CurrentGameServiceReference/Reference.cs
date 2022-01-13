@@ -26,6 +26,12 @@ namespace MineClicker.CurrentGameServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/ICurrentGameService/SetPlayerInWaitingQueue")]
         System.Threading.Tasks.Task SetPlayerInWaitingQueueAsync(int playerID);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/ICurrentGameService/SendDestroyedBlocks")]
+        void SendDestroyedBlocks(WCFServices.Models.Block[] destroyedBlocks, string guid, int playerID);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/ICurrentGameService/SendDestroyedBlocks")]
+        System.Threading.Tasks.Task SendDestroyedBlocksAsync(WCFServices.Models.Block[] destroyedBlocks, string guid, int playerID);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -33,6 +39,9 @@ namespace MineClicker.CurrentGameServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/ICurrentGameService/StartGameCallback")]
         void StartGameCallback(string gameGUID);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/ICurrentGameService/EndGame")]
+        void EndGame(string playerWinnerUsername);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -77,6 +86,14 @@ namespace MineClicker.CurrentGameServiceReference {
         
         public System.Threading.Tasks.Task SetPlayerInWaitingQueueAsync(int playerID) {
             return base.Channel.SetPlayerInWaitingQueueAsync(playerID);
+        }
+        
+        public void SendDestroyedBlocks(WCFServices.Models.Block[] destroyedBlocks, string guid, int playerID) {
+            base.Channel.SendDestroyedBlocks(destroyedBlocks, guid, playerID);
+        }
+        
+        public System.Threading.Tasks.Task SendDestroyedBlocksAsync(WCFServices.Models.Block[] destroyedBlocks, string guid, int playerID) {
+            return base.Channel.SendDestroyedBlocksAsync(destroyedBlocks, guid, playerID);
         }
     }
 }

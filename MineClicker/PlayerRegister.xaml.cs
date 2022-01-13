@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MineClicker.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,11 +23,29 @@ namespace MineClicker {
 
             InitializeComponent();
         }
-        private void AcceptBtn(object sender, RoutedEventArgs e) {
-            LogIn window = new LogIn();
+        private void AcceptButton(object sender, RoutedEventArgs e) {
+            try {
+                WCFServices.Models.Player newPlayer = new WCFServices.Models.Player {
+                    Username = Username.Text,
+                    Name = Name.Text,
+                    Email = Email.Text,
+                    Password = Password.Text
+                };
+                PlayerHelper.PlayerRegister(newPlayer);
+                MessageBox.Show(Properties.Resources.RegisterMessage);
+                LogIn window = new LogIn();
 
-            window.Show();
-            window.Close();
+                window.Show();
+                Close();
+            } catch (Exception) {
+                MessageBox.Show(Properties.Resources.RegisterFailMessage);
+            }
+        }
+        private void CancelButton(object sender, RoutedEventArgs e) {
+            LogIn goLogIn = new LogIn();
+            this.Close();
+            goLogIn.ShowDialog();
+
         }
     }
 }

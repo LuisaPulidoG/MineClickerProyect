@@ -15,11 +15,11 @@ namespace MineClicker.GameServiceReference {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="GameServiceReference.IGameService")]
     public interface IGameService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGameService/Test", ReplyAction="http://tempuri.org/IGameService/TestResponse")]
-        void Test();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGameService/GetBlocks", ReplyAction="http://tempuri.org/IGameService/GetBlocksResponse")]
+        WCFServices.Models.Block[] GetBlocks();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGameService/Test", ReplyAction="http://tempuri.org/IGameService/TestResponse")]
-        System.Threading.Tasks.Task TestAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGameService/GetBlocks", ReplyAction="http://tempuri.org/IGameService/GetBlocksResponse")]
+        System.Threading.Tasks.Task<WCFServices.Models.Block[]> GetBlocksAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -49,12 +49,12 @@ namespace MineClicker.GameServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public void Test() {
-            base.Channel.Test();
+        public WCFServices.Models.Block[] GetBlocks() {
+            return base.Channel.GetBlocks();
         }
         
-        public System.Threading.Tasks.Task TestAsync() {
-            return base.Channel.TestAsync();
+        public System.Threading.Tasks.Task<WCFServices.Models.Block[]> GetBlocksAsync() {
+            return base.Channel.GetBlocksAsync();
         }
     }
 }

@@ -237,6 +237,12 @@
   <data name="NameP9" xml:space="preserve">
     <value>Platino</value>
   </data>
+  <data name="NewAccountButton" xml:space="preserve">
+    <value>Crear una cuenta</value>
+  </data>
+  <data name="NewAccountMessage" xml:space="preserve">
+    <value>¿No tienes cuenta?</value>
+  </data>
   <data name="Nickname" xml:space="preserve">
     <value>Apodo</value>
   </data>
@@ -273,6 +279,12 @@
   <data name="PriceP9" xml:space="preserve">
     <value>Precio: $ 110</value>
   </data>
+  <data name="RegisterFailMessage" xml:space="preserve">
+    <value>El nombre de usuario o correo ya estan registrados</value>
+  </data>
+  <data name="RegisterMessage" xml:space="preserve">
+    <value>Jugador reistrado con éxito</value>
+  </data>
   <data name="SecondName" xml:space="preserve">
     <value>Apellido</value>
   </data>
@@ -300,10 +312,25 @@
   <data name="TitleMain" xml:space="preserve">
     <value>Mine Clicker</value>
   </data>
+  <data name="TitleMultiplayer" xml:space="preserve">
+    <value />
+  </data>
   <data name="TitleRegister" xml:space="preserve">
     <value>Registro de usuario</value>
   </data>
   <data name="TitleStore" xml:space="preserve">
     <value>Tienda</value>
+  </data>
+  <data name="TitleWaitingWindow" xml:space="preserve">
+    <value>Esperando Partida</value>
+  </data>
+  <data name="TitleWinnerWindow" xml:space="preserve">
+    <value>Ganador</value>
+  </data>
+  <data name="WaitingMessage" xml:space="preserve">
+    <value>Esperando jugador a que se una a la partida</value>
+  </data>
+  <data name="WinnerMessage" xml:space="preserve">
+    <value>El ganador es:</value>
   </data>
 </root>

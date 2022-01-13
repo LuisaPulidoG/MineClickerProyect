@@ -303,10 +303,22 @@
   <data name="TitleMain" xml:space="preserve">
     <value>マインクリッカー</value>
   </data>
+  <data name="TitleMultiplayer" xml:space="preserve">
+    <value />
+  </data>
   <data name="TitleRegister" xml:space="preserve">
     <value>ユーザー登録</value>
   </data>
   <data name="TitleStore" xml:space="preserve">
     <value>店</value>
+  </data>
+  <data name="TitleWaitingWindow" xml:space="preserve">
+    <value>出発を待っています</value>
+  </data>
+  <data name="WaitingMessage" xml:space="preserve">
+    <value>パートナーがゲームに参加するのを待っています</value>
+  </data>
+  <data name="WinnerMessage" xml:space="preserve">
+    <value />
   </data>
 </root>

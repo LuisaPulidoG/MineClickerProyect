@@ -26,5 +26,26 @@ namespace MineClicker {
             this.Close();
             main.ShowDialog();
         }
+
+        private void CambioIdiomaEspaniol_Click(object sender, RoutedEventArgs e) {
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("es-MX");
+            GameConfiguration window = new GameConfiguration();
+            this.Close();
+            window.ShowDialog();
+        }
+
+        private void CambioIdiomaJapones_Click(object sender, RoutedEventArgs e) {
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("ja-JP");
+            GameConfiguration window = new GameConfiguration();
+            this.Close();
+            window.ShowDialog();
+        }
+
+        private void CambioIdiomaIngles_Click(object sender, RoutedEventArgs e) {
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("");
+            GameConfiguration window = new GameConfiguration();
+            this.Close();
+            window.ShowDialog();
+        }
     }
 }

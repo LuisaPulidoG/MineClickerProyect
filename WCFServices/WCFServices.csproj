@@ -76,11 +76,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountService.cs" />
+    <Compile Include="ChatService.cs" />
     <Compile Include="CurrentGameService.cs" />
     <Compile Include="GameService.cs" />
     <Compile Include="IAccountService.cs" />
+    <Compile Include="IChatService.cs" />
     <Compile Include="ICurrentGameService.cs" />
     <Compile Include="IGameService.cs" />
+    <Compile Include="Models\Block.cs" />
     <Compile Include="Models\FriendUserStats.cs" />
     <Compile Include="Models\GlobalUserStats.cs" />
     <Compile Include="Models\PersonalUserStats.cs" />

@@ -62,4 +62,10 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="FriendUserStats" nillable="true" type="tns:FriendUserStats" />
+  <xs:complexType name="ArrayOfPlayer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Player" nillable="true" type="tns:Player" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlayer" nillable="true" type="tns:ArrayOfPlayer" />
 </xs:schema>

@@ -25,15 +25,27 @@ namespace MineClicker {
 
         public WaitingGameWindow() {
             InitializeComponent();
-            InstanceContext instance = new InstanceContext(new CurrentGameCallback());
+            InstanceContext instance = new InstanceContext(new CurrentGameCallback(this));
             client = new CurrentGameServiceClient(instance);
             client.SetPlayerInWaitingQueue(Session.Player.PlayerId);
         }
 
     }
     public class CurrentGameCallback : CurrentGameCallbackHandler {
-        public override void StartGameCallback(string gameGUID) {
-            Console.WriteLine("Hola, prueba :D");
+        private WaitingGameWindow waitingGame;
+        public CurrentGameCallback(WaitingGameWindow waitingGame) {
+            this.waitingGame = waitingGame;
         }
+
+        public override void EndGame(string playerWinnerUsername) {
+            throw new NotImplementedException();
+        }
+
+        public override void StartGameCallback(string gameGUID) {
+            Multiplayer multiplayerGameWindow = new Multiplayer(gameGUID);
+            waitingGame.Close();
+            multiplayerGameWindow.ShowDialog();
+        }
+
     }
 }

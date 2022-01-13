@@ -38,6 +38,18 @@ namespace MineClicker.AccountServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/GetFriendsStats", ReplyAction="http://tempuri.org/IAccountService/GetFriendsStatsResponse")]
         System.Threading.Tasks.Task<WCFServices.Models.FriendUserStats[]> GetFriendsStatsAsync(int playerId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/GetFriends", ReplyAction="http://tempuri.org/IAccountService/GetFriendsResponse")]
+        WCFServices.Models.Player[] GetFriends(int playerId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/GetFriends", ReplyAction="http://tempuri.org/IAccountService/GetFriendsResponse")]
+        System.Threading.Tasks.Task<WCFServices.Models.Player[]> GetFriendsAsync(int playerId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/RegisterPlayer", ReplyAction="http://tempuri.org/IAccountService/RegisterPlayerResponse")]
+        void RegisterPlayer(WCFServices.Models.Player player);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/RegisterPlayer", ReplyAction="http://tempuri.org/IAccountService/RegisterPlayerResponse")]
+        System.Threading.Tasks.Task RegisterPlayerAsync(WCFServices.Models.Player player);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -97,6 +109,22 @@ namespace MineClicker.AccountServiceReference {
         
         public System.Threading.Tasks.Task<WCFServices.Models.FriendUserStats[]> GetFriendsStatsAsync(int playerId) {
             return base.Channel.GetFriendsStatsAsync(playerId);
+        }
+        
+        public WCFServices.Models.Player[] GetFriends(int playerId) {
+            return base.Channel.GetFriends(playerId);
+        }
+        
+        public System.Threading.Tasks.Task<WCFServices.Models.Player[]> GetFriendsAsync(int playerId) {
+            return base.Channel.GetFriendsAsync(playerId);
+        }
+        
+        public void RegisterPlayer(WCFServices.Models.Player player) {
+            base.Channel.RegisterPlayer(player);
+        }
+        
+        public System.Threading.Tasks.Task RegisterPlayerAsync(WCFServices.Models.Player player) {
+            return base.Channel.RegisterPlayerAsync(player);
         }
     }
 }

@@ -15,6 +15,8 @@ using System.ServiceModel;
 using System.Media;
 using MineClicker.Objetos;
 using System.IO;
+using MineClicker.Helpers;
+using WCFServices.Models;
 
 namespace MineClicker {
     /// <summary>
@@ -22,17 +24,8 @@ namespace MineClicker {
     /// </summary>
     /// 
     public partial class MainWindow : Window {
-        SoundPlayer EfBlockSound = new SoundPlayer(Properties.SoundResources.RomperBloquewav as Stream);
-        int bloqueactual;
-        int numerorandom;
-        int bloquesDestridos = 0;
-        float dineroObtenido = 0;
-        List<Bloque> listaBloques = new List<Bloque>();
-        private Random random = new Random();
-        Bloque bloque1 = new Bloque("bloque1", 1, 2, 1000, "/Sourse_Imagen/Bloque1.png");
-        Bloque bloque2 = new Bloque("bloque2", 5, 4, 90, "/Sourse_Imagen/Bloque2.png");
-        Bloque bloque3 = new Bloque("bloque3", 10, 5, 30, "/Sourse_Imagen/Bloque3.png");
-        Bloque bloque4 = new Bloque("bloque4", 6, 7, 19, "/Sourse_Imagen/Bloque4.png");
+        private Player[] friends; 
+        
 
         //private bool isConnected = false;
 
@@ -41,59 +34,16 @@ namespace MineClicker {
         //public char PasswordChar { get; set; }
 
         public MainWindow() {
-            listaBloques.Add(bloque1);
-            listaBloques.Add(bloque2);
-            listaBloques.Add(bloque3);
-            listaBloques.Add(bloque4);
             InitializeComponent();
-            numerorandom = random.Next(0, 3);
-            bloqueactual = numerorandom;
-            ImagenChange.Source = listaBloques[numerorandom].GetImagen();
-        }
-
-        private void BreakBlockBtn(object sender, RoutedEventArgs e) {
-
-            int clicks = int.Parse(ClicsPorSegundo.Text);
-            clicks++;
-            ClicsPorSegundo.Text = clicks.ToString();
-
-
-            int[] Chancebloque = new int[4];
-            for (int i = 0; i < 4; i++) {
-                Chancebloque[i] = 0;
+            friends = PlayerHelper.GetFriends();
+            foreach(var friend in friends) {
+                FriendsList.Children.Add(new TextBlock {
+                    Text = friend.Username,
+                    Foreground = Brushes.White,
+                    FontSize = 18,
+                    Padding = new Thickness(10)
+                });
             }
-
-            if (clicks > listaBloques[bloqueactual].getdureza()) {
-                dineroObtenido = dineroObtenido + listaBloques[bloqueactual].GetValorbloque();
-                for (int busqueda = 0; busqueda < listaBloques.Count(); busqueda++) {
-                    float probabilidad = listaBloques[busqueda].GetProbabilidad();
-                    for (int numVeces = 0; numVeces < probabilidad; numVeces++) {
-                        bloqueactual = random.Next(0, 10);
-                        if (Chancebloque[busqueda] < bloqueactual) {
-                            Chancebloque[busqueda] = bloqueactual;
-                        }
-                    }
-                }
-                for (int valorMax = 0; valorMax < 4; valorMax++) {
-                    if (valorMax == 0) {
-                        bloqueactual = valorMax;
-                    } else if (Chancebloque[valorMax] > Chancebloque[valorMax - 1]) {
-                        bloqueactual = valorMax;
-                    }
-                }
-                clicks = 0;
-                ClicsPorSegundo.Text = clicks.ToString();
-                bloquesDestridos++;
-
-
-                ImagenChange.Source = listaBloques[bloqueactual].GetImagen();
-                EfBlockSound.Play();
-
-            }
-
-            bloquesdestruidos.Text = bloquesDestridos.ToString();
-            DineroObtenido.Text = dineroObtenido.ToString();
-
         }
 
         private void ChatBtn(object sender, RoutedEventArgs e) {
@@ -140,6 +90,10 @@ namespace MineClicker {
             SendInvitation invitationWindow = new SendInvitation();
             this.Close();
             invitationWindow.ShowDialog();
+        }
+
+        private void BotonChatGeneral(object sender, RoutedEventArgs e) {
+
         }
     }
 }
