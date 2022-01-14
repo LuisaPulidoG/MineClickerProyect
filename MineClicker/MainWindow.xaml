@@ -91,20 +91,12 @@
             </Button.Effect>
         </Button>
         <TextBox x:Name="bloquesdestruidos" HorizontalAlignment="Left" Height="23" Margin="360,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="332" RenderTransformOrigin="0.475,0.522" Background="{x:Null}" FontWeight="Bold" FontSize="14" Text="0" BorderBrush="{x:Null}" IsReadOnly="True"/>
-        <Rectangle x:Name="CuadroDeCambioPico" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="94" Margin="640,341,0,0" Stroke="Black" VerticalAlignment="Top" Width="100" RadiusY="28.5" RadiusX="28.5"/>
-        <Button Content="&lt;--" HorizontalAlignment="Left" Margin="587,360,0,0" VerticalAlignment="Top" Width="40" Height="40" FontSize="22" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontWeight="Bold" Click="ChangeLeftBtn" RenderTransformOrigin="-0.504,0.533"/>
-        <Button Content="-->" HorizontalAlignment="Left" Margin="752,360,0,0" VerticalAlignment="Top" Width="40" Height="40" FontWeight="Bold" FontSize="22" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" Click="ChangeRightBtn" />
         <StackPanel x:Name="FriendsList" HorizontalAlignment="Left" Height="248" Margin="526,41,0,0" VerticalAlignment="Top" Orientation="Vertical" Width="226" Background="{x:Null}"/>
         <StackPanel x:Name="MessagesStackPanel" HorizontalAlignment="Left" Height="313" Margin="145,41,0,0" VerticalAlignment="Top" Width="365" Background="White" Orientation="Vertical"/>
         <TextBox x:Name="MessageTextBox" HorizontalAlignment="Left" Height="35" Margin="145,358,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="323" MaxLength="500"/>
         <Button Content="Enviar" HorizontalAlignment="Left" Margin="471,358,0,0" VerticalAlignment="Top" Width="39" Height="35" Foreground="White" BorderBrush="White" Click="Button_Click" >
             <Button.Background>
                 <ImageBrush ImageSource="Sourse_Imagen/IconoEnviarMensaje.png"/>
-            </Button.Background>
-        </Button>
-        <Button Content="Chat global" HorizontalAlignment="Left" Margin="526,294,0,0" VerticalAlignment="Top" Width="101" Height="27" Foreground="White" FontSize="18" Click="BotonChatGeneral">
-            <Button.Background>
-                <ImageBrush ImageSource="Sourse_Imagen/TexturaBotonChatGlobal.png" Stretch="Uniform"/>
             </Button.Background>
         </Button>
 
