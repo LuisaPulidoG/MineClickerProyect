@@ -28,5 +28,11 @@ namespace MineClicker.Helpers {
         public static void PlayerRegister(Player newPlayer) {
             client.RegisterPlayer(newPlayer);
         }
+        public static void AttendFriendRequest(int friendRequestID, bool response) {
+            client.AttendFriendRequest(friendRequestID, response);
+        }
+        public static void SendFriendRequest(string username) {
+            client.SendFriendRequest(username, Session.Player.PlayerId);
+        }
     }
 }

@@ -11,7 +11,6 @@
         <Grid.Background>
             <ImageBrush ImageSource="Sourse_Imagen/TexturaFondoJuego.jpg"/>
         </Grid.Background>
-        <TextBlock x:Name="CajaDeTextoApodo" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" Height="50" Width="237"/>
         <Label Content="{x:Static p:Resources.eMail}" HorizontalAlignment="Stretch" Margin="238,200,413.333,0" VerticalAlignment="Top" Foreground="#FFDCE4DA" FontFamily="Bold" FontSize="20" FontWeight="Bold" Height="33"/>
         <Label Content="{x:Static p:Resources.FriendName}" HorizontalAlignment="Stretch" Margin="238,109,334.333,0" VerticalAlignment="Top" Foreground="#FFDCE4DA" FontFamily="Bold" FontSize="20" FontWeight="Bold" Height="33"/>
         <Label Content="{x:Static p:Resources.SendInvitationTag}" HorizontalAlignment="Stretch" Margin="29,54,409.333,0" VerticalAlignment="Top" Foreground="#FFDCE4DA" FontFamily="Bold" FontSize="20" FontWeight="Bold" Height="33"/>

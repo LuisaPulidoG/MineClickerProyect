@@ -268,6 +268,33 @@ namespace MineClicker.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Add friend.
+        /// </summary>
+        public static string FriendRequestButton {
+            get {
+                return ResourceManager.GetString("FriendRequestButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Friend request sent.
+        /// </summary>
+        public static string FriendRequestSentMessage {
+            get {
+                return ResourceManager.GetString("FriendRequestSentMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Friend username: .
+        /// </summary>
+        public static string FriendUsernameTag {
+            get {
+                return ResourceManager.GetString("FriendUsernameTag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Help.
         /// </summary>
         public static string HelpButton {
@@ -448,6 +475,15 @@ namespace MineClicker.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Your friend is offline.
+        /// </summary>
+        public static string OfflineFriendMessage {
+            get {
+                return ResourceManager.GetString("OfflineFriendMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Password.
         /// </summary>
         public static string PasswordLogin {
@@ -574,6 +610,15 @@ namespace MineClicker.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Send.
+        /// </summary>
+        public static string SendFriendRequestButton {
+            get {
+                return ResourceManager.GetString("SendFriendRequestButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Invite.
         /// </summary>
         public static string SendInvitationButton {
@@ -588,6 +633,24 @@ namespace MineClicker.Properties {
         public static string SendInvitationTag {
             get {
                 return ResourceManager.GetString("SendInvitationTag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Player username not found.
+        /// </summary>
+        public static string SendRequestFailedMessage {
+            get {
+                return ResourceManager.GetString("SendRequestFailedMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Send friend request.
+        /// </summary>
+        public static string SendRequestTag {
+            get {
+                return ResourceManager.GetString("SendRequestTag", resourceCulture);
             }
         }
         
@@ -615,6 +678,15 @@ namespace MineClicker.Properties {
         public static string StoreButton {
             get {
                 return ResourceManager.GetString("StoreButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Send friend request.
+        /// </summary>
+        public static string TitleAddFriend {
+            get {
+                return ResourceManager.GetString("TitleAddFriend", resourceCulture);
             }
         }
         

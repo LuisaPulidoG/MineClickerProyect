@@ -9,5 +9,6 @@ using WCFServices.Models;
 namespace MineClicker.Helpers {
     public class Session {
         public static Player Player { get; set; }
+        public static Dictionary<int, Dictionary<int, string>> chats = new Dictionary<int, Dictionary<int,string>>();
     }
 }

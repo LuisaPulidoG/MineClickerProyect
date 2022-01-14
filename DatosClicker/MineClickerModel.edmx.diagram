@@ -4,14 +4,17 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f6fa029c41d8405b8087bc5467c666ee" Name="Diagram1" ZoomLevel="55">
-        <EntityTypeShape EntityType="MineClickerModel.Block" Width="1.5" PointX="7.5" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="MineClickerModel.Game" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="MineClickerModel.Pickaxe" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="MineClickerModel.Player" Width="1.5" PointX="3" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MineClickerModel.PlayerGame" Width="1.5" PointX="7.5" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="MineClickerModel.PlayerGameBlock" Width="1.5" PointX="9.75" PointY="1.5" IsExpanded="true" />
+      <Diagram DiagramId="85717a116f4e4fed8341854f26d78bd4" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="MineClickerModel.Block" Width="1.5" PointX="7.5" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MineClickerModel.FriendRequest" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MineClickerModel.Game" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="MineClickerModel.Pickaxe" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MineClickerModel.Player" Width="1.5" PointX="3" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MineClickerModel.PlayerGame" Width="1.5" PointX="7.5" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MineClickerModel.PlayerGameBlock" Width="1.5" PointX="9.75" PointY="2.875" IsExpanded="true" />
         <AssociationConnector Association="MineClickerModel.FK__PlayerGam__Block__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="MineClickerModel.FK__FriendReq__Playe__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="MineClickerModel.FK__FriendReq__Playe__4E88ABD4" ManuallyRouted="false" />
         <AssociationConnector Association="MineClickerModel.FK__Game__PlayerId__300424B4" ManuallyRouted="false" />
         <AssociationConnector Association="MineClickerModel.FK__PlayerGam__GameI__33D4B598" ManuallyRouted="false" />
         <AssociationConnector Association="MineClickerModel.FK__PlayerGam__Playe__32E0915F" ManuallyRouted="false" />

@@ -12,20 +12,13 @@ namespace DatosClicker
     using System;
     using System.Collections.Generic;
     
-    public partial class Game
+    public partial class FriendRequest
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Game()
-        {
-            this.PlayerGame = new HashSet<PlayerGame>();
-        }
-    
-        public int GameId { get; set; }
-        public int PlayerId { get; set; }
-        public System.DateTime CreationDate { get; set; }
+        public int FriendRequestID { get; set; }
+        public int PlayerSenderID { get; set; }
+        public int PlayerReceiverID { get; set; }
     
         public virtual Player Player { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PlayerGame> PlayerGame { get; set; }
+        public virtual Player Player1 { get; set; }
     }
 }

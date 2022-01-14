@@ -44,6 +44,18 @@
   <wsdl:message name="IAccountService_RegisterPlayer_OutputMessage">
     <wsdl:part name="parameters" element="tns:RegisterPlayerResponse" />
   </wsdl:message>
+  <wsdl:message name="IAccountService_AttendFriendRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:AttendFriendRequest" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_AttendFriendRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AttendFriendRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_SendFriendRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendFriendRequest" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_SendFriendRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendFriendRequestResponse" />
+  </wsdl:message>
   <wsdl:portType name="IAccountService">
     <wsdl:operation name="LogIn">
       <wsdl:input wsaw:Action="http://tempuri.org/IAccountService/LogIn" message="tns:IAccountService_LogIn_InputMessage" />
@@ -68,6 +80,14 @@
     <wsdl:operation name="RegisterPlayer">
       <wsdl:input wsaw:Action="http://tempuri.org/IAccountService/RegisterPlayer" message="tns:IAccountService_RegisterPlayer_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAccountService/RegisterPlayerResponse" message="tns:IAccountService_RegisterPlayer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AttendFriendRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountService/AttendFriendRequest" message="tns:IAccountService_AttendFriendRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountService/AttendFriendRequestResponse" message="tns:IAccountService_AttendFriendRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendFriendRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountService/SendFriendRequest" message="tns:IAccountService_SendFriendRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountService/SendFriendRequestResponse" message="tns:IAccountService_SendFriendRequest_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IAccountService" type="tns:IAccountService">
@@ -119,6 +139,24 @@
     </wsdl:operation>
     <wsdl:operation name="RegisterPlayer">
       <soap:operation soapAction="http://tempuri.org/IAccountService/RegisterPlayer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AttendFriendRequest">
+      <soap:operation soapAction="http://tempuri.org/IAccountService/AttendFriendRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendFriendRequest">
+      <soap:operation soapAction="http://tempuri.org/IAccountService/SendFriendRequest" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

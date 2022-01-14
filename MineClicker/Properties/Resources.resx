@@ -186,6 +186,15 @@
   <data name="FriendName" xml:space="preserve">
     <value>Enter friend name : </value>
   </data>
+  <data name="FriendRequestButton" xml:space="preserve">
+    <value>Add friend</value>
+  </data>
+  <data name="FriendRequestSentMessage" xml:space="preserve">
+    <value>Friend request sent</value>
+  </data>
+  <data name="FriendUsernameTag" xml:space="preserve">
+    <value>Friend username: </value>
+  </data>
   <data name="HelpButton" xml:space="preserve">
     <value>Help</value>
   </data>
@@ -246,6 +255,9 @@
   <data name="Nickname" xml:space="preserve">
     <value>Username</value>
   </data>
+  <data name="OfflineFriendMessage" xml:space="preserve">
+    <value>Your friend is offline</value>
+  </data>
   <data name="PasswordLogin" xml:space="preserve">
     <value>Password</value>
   </data>
@@ -288,11 +300,20 @@
   <data name="SecondName" xml:space="preserve">
     <value>Second Name</value>
   </data>
+  <data name="SendFriendRequestButton" xml:space="preserve">
+    <value>Send</value>
+  </data>
   <data name="SendInvitationButton" xml:space="preserve">
     <value>Invite</value>
   </data>
   <data name="SendInvitationTag" xml:space="preserve">
     <value>Ask a friend to join the game!</value>
+  </data>
+  <data name="SendRequestFailedMessage" xml:space="preserve">
+    <value>Player username not found</value>
+  </data>
+  <data name="SendRequestTag" xml:space="preserve">
+    <value>Send friend request</value>
   </data>
   <data name="SpanishButton" xml:space="preserve">
     <value>Spanish</value>
@@ -302,6 +323,9 @@
   </data>
   <data name="StoreButton" xml:space="preserve">
     <value>Peak Store</value>
+  </data>
+  <data name="TitleAddFriend" xml:space="preserve">
+    <value>Send friend request</value>
   </data>
   <data name="TitleInvitation" xml:space="preserve">
     <value>Invite a friend</value>

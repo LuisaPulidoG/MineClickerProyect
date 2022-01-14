@@ -97,6 +97,9 @@ namespace WCFServices {
                 foreach (var friend in player.Player1) {
                     friends.Add(new Models.Player(friend));
                 }
+                foreach (var friend in player.Player2) {
+                    friends.Add(new Models.Player(friend));
+                }
                 return friends;
             }
         }
@@ -115,6 +118,33 @@ namespace WCFServices {
                 };
                 db.Player.Add(newPlayer);
                 db.SaveChanges();
+            }
+        }
+        public void AttendFriendRequest(int friendRequestID, bool response) {
+            using (MineClickerEntities db = new MineClickerEntities()) {
+                var friendRequest = db.FriendRequest.Find(friendRequestID);
+                if (response) {
+                    var playerSender = db.Player.Find(friendRequest.PlayerSenderID);
+                    var playerReceiver = db.Player.Find(friendRequest.PlayerReceiverID);
+                    playerSender.Player1.Add(playerReceiver);
+                }
+                db.FriendRequest.Remove(friendRequest);
+                db.SaveChanges();
+            }
+        }
+        public void SendFriendRequest(string username, int playerSenderID ) {
+            using (MineClickerEntities db = new MineClickerEntities()) {
+                var friend = db.Player.Where(x => x.Username == username).FirstOrDefault();
+                if(friend != null) {
+                    db.FriendRequest.Add(new FriendRequest {
+                        PlayerSenderID = playerSenderID,
+                        PlayerReceiverID = friend.PlayerId
+                    });
+                    db.SaveChanges();
+                } else {
+                    throw new FaultException("Player username not found");
+                }
+
             }
         }
     }

@@ -4,61 +4,69 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Alias="Self" Namespace="MineClickerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012">
+      <Schema Namespace="MineClickerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Block">
           <Key>
             <PropertyRef Name="BlockId" />
           </Key>
-          <Property Name="BlockId" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
-          <Property Name="Name" Nullable="false" MaxLength="50" Type="varchar" />
-          <Property Name="Value" Nullable="false" Type="float" />
-          <Property Name="Rarity" Nullable="false" Type="int" />
-          <Property Name="Hardness" Nullable="false" Type="int" />
+          <Property Name="BlockId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Value" Type="float" Nullable="false" />
+          <Property Name="Rarity" Type="int" Nullable="false" />
+          <Property Name="Hardness" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FriendRequest">
+          <Key>
+            <PropertyRef Name="FriendRequestID" />
+          </Key>
+          <Property Name="FriendRequestID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PlayerSenderID" Type="int" Nullable="false" />
+          <Property Name="PlayerReceiverID" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Game">
           <Key>
             <PropertyRef Name="GameId" />
           </Key>
-          <Property Name="GameId" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
-          <Property Name="PlayerId" Nullable="false" Type="int" />
-          <Property Name="CreationDate" Nullable="false" Type="datetime" />
+          <Property Name="GameId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PlayerId" Type="int" Nullable="false" />
+          <Property Name="CreationDate" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="Pickaxe">
           <Key>
             <PropertyRef Name="PickaxeId" />
           </Key>
-          <Property Name="PickaxeId" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
-          <Property Name="Name" Nullable="false" MaxLength="50" Type="varchar" />
-          <Property Name="Efficiency" Nullable="false" Type="int" />
-          <Property Name="Price" Nullable="false" Type="float" />
+          <Property Name="PickaxeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Efficiency" Type="int" Nullable="false" />
+          <Property Name="Price" Type="float" Nullable="false" />
         </EntityType>
         <EntityType Name="Player">
           <Key>
             <PropertyRef Name="PlayerId" />
           </Key>
-          <Property Name="PlayerId" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
-          <Property Name="Email" Nullable="false" MaxLength="50" Type="varchar" />
-          <Property Name="Password" Nullable="false" MaxLength="255" Type="varchar" />
-          <Property Name="Name" Nullable="false" MaxLength="50" Type="varchar" />
-          <Property Name="Username" Nullable="false" MaxLength="20" Type="varchar" />
-          <Property Name="Money" Nullable="false" Type="float" />
+          <Property Name="PlayerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Username" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Money" Type="float" Nullable="false" />
         </EntityType>
         <EntityType Name="PlayerFriend">
           <Key>
             <PropertyRef Name="PlayerId" />
             <PropertyRef Name="PlayerFriendId" />
           </Key>
-          <Property Name="PlayerId" Nullable="false" Type="int" />
-          <Property Name="PlayerFriendId" Nullable="false" Type="int" />
+          <Property Name="PlayerId" Type="int" Nullable="false" />
+          <Property Name="PlayerFriendId" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="PlayerGame">
           <Key>
             <PropertyRef Name="PlayerGameId" />
           </Key>
-          <Property Name="PlayerGameId" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
-          <Property Name="PlayerId" Nullable="false" Type="int" />
-          <Property Name="GameId" Nullable="false" Type="int" />
-          <Property Name="EarnedMoney" Nullable="false" Type="float" />
+          <Property Name="PlayerGameId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PlayerId" Type="int" Nullable="false" />
+          <Property Name="GameId" Type="int" Nullable="false" />
+          <Property Name="EarnedMoney" Type="float" Nullable="false" />
         </EntityType>
         <!--Errores durante la generación:
 advertencia 6002: La tabla o vista 'MineClicker.dbo.PlayerGameBlock' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
@@ -68,21 +76,45 @@ advertencia 6002: La tabla o vista 'MineClicker.dbo.PlayerGameBlock' no tiene de
             <PropertyRef Name="BlockId" />
             <PropertyRef Name="Destroyed" />
           </Key>
-          <Property Name="PlayerGameId" Nullable="false" Type="int" />
-          <Property Name="BlockId" Nullable="false" Type="int" />
-          <Property Name="Destroyed" Nullable="false" Type="int" />
+          <Property Name="PlayerGameId" Type="int" Nullable="false" />
+          <Property Name="BlockId" Type="int" Nullable="false" />
+          <Property Name="Destroyed" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="PlayerPickaxe">
           <Key>
             <PropertyRef Name="PlayerId" />
             <PropertyRef Name="PickaxeId" />
           </Key>
-          <Property Name="PlayerId" Nullable="false" Type="int" />
-          <Property Name="PickaxeId" Nullable="false" Type="int" />
+          <Property Name="PlayerId" Type="int" Nullable="false" />
+          <Property Name="PickaxeId" Type="int" Nullable="false" />
         </EntityType>
+        <Association Name="FK__FriendReq__Playe__4D94879B">
+          <End Role="Player" Type="Self.Player" Multiplicity="1" />
+          <End Role="FriendRequest" Type="Self.FriendRequest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="PlayerId" />
+            </Principal>
+            <Dependent Role="FriendRequest">
+              <PropertyRef Name="PlayerSenderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__FriendReq__Playe__4E88ABD4">
+          <End Role="Player" Type="Self.Player" Multiplicity="1" />
+          <End Role="FriendRequest" Type="Self.FriendRequest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="PlayerId" />
+            </Principal>
+            <Dependent Role="FriendRequest">
+              <PropertyRef Name="PlayerReceiverID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__Game__PlayerId__300424B4">
-          <End Type="Self.Player" Multiplicity="1" Role="Player" />
-          <End Type="Self.Game" Multiplicity="*" Role="Game" />
+          <End Role="Player" Type="Self.Player" Multiplicity="1" />
+          <End Role="Game" Type="Self.Game" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Player">
               <PropertyRef Name="PlayerId" />
@@ -93,8 +125,8 @@ advertencia 6002: La tabla o vista 'MineClicker.dbo.PlayerGameBlock' no tiene de
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__PlayerFri__Playe__267ABA7A">
-          <End Type="Self.Player" Multiplicity="1" Role="Player" />
-          <End Type="Self.PlayerFriend" Multiplicity="*" Role="PlayerFriend" />
+          <End Role="Player" Type="Self.Player" Multiplicity="1" />
+          <End Role="PlayerFriend" Type="Self.PlayerFriend" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Player">
               <PropertyRef Name="PlayerId" />
@@ -105,8 +137,8 @@ advertencia 6002: La tabla o vista 'MineClicker.dbo.PlayerGameBlock' no tiene de
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__PlayerFri__Playe__276EDEB3">
-          <End Type="Self.Player" Multiplicity="1" Role="Player" />
-          <End Type="Self.PlayerFriend" Multiplicity="*" Role="PlayerFriend" />
+          <End Role="Player" Type="Self.Player" Multiplicity="1" />
+          <End Role="PlayerFriend" Type="Self.PlayerFriend" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Player">
               <PropertyRef Name="PlayerId" />
@@ -117,8 +149,8 @@ advertencia 6002: La tabla o vista 'MineClicker.dbo.PlayerGameBlock' no tiene de
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__PlayerGam__Block__38996AB5">
-          <End Type="Self.Block" Multiplicity="1" Role="Block" />
-          <End Type="Self.PlayerGameBlock" Multiplicity="*" Role="PlayerGameBlock" />
+          <End Role="Block" Type="Self.Block" Multiplicity="1" />
+          <End Role="PlayerGameBlock" Type="Self.PlayerGameBlock" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Block">
               <PropertyRef Name="BlockId" />
@@ -129,8 +161,8 @@ advertencia 6002: La tabla o vista 'MineClicker.dbo.PlayerGameBlock' no tiene de
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__PlayerGam__GameI__33D4B598">
-          <End Type="Self.Game" Multiplicity="1" Role="Game" />
-          <End Type="Self.PlayerGame" Multiplicity="*" Role="PlayerGame" />
+          <End Role="Game" Type="Self.Game" Multiplicity="1" />
+          <End Role="PlayerGame" Type="Self.PlayerGame" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Game">
               <PropertyRef Name="GameId" />
@@ -141,8 +173,8 @@ advertencia 6002: La tabla o vista 'MineClicker.dbo.PlayerGameBlock' no tiene de
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__PlayerGam__Playe__32E0915F">
-          <End Type="Self.Player" Multiplicity="1" Role="Player" />
-          <End Type="Self.PlayerGame" Multiplicity="*" Role="PlayerGame" />
+          <End Role="Player" Type="Self.Player" Multiplicity="1" />
+          <End Role="PlayerGame" Type="Self.PlayerGame" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Player">
               <PropertyRef Name="PlayerId" />
@@ -153,8 +185,8 @@ advertencia 6002: La tabla o vista 'MineClicker.dbo.PlayerGameBlock' no tiene de
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__PlayerGam__Playe__37A5467C">
-          <End Type="Self.PlayerGame" Multiplicity="1" Role="PlayerGame" />
-          <End Type="Self.PlayerGameBlock" Multiplicity="*" Role="PlayerGameBlock" />
+          <End Role="PlayerGame" Type="Self.PlayerGame" Multiplicity="1" />
+          <End Role="PlayerGameBlock" Type="Self.PlayerGameBlock" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="PlayerGame">
               <PropertyRef Name="PlayerGameId" />
@@ -165,8 +197,8 @@ advertencia 6002: La tabla o vista 'MineClicker.dbo.PlayerGameBlock' no tiene de
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__PlayerPic__Picka__2D27B809">
-          <End Type="Self.Pickaxe" Multiplicity="1" Role="Pickaxe" />
-          <End Type="Self.PlayerPickaxe" Multiplicity="*" Role="PlayerPickaxe" />
+          <End Role="Pickaxe" Type="Self.Pickaxe" Multiplicity="1" />
+          <End Role="PlayerPickaxe" Type="Self.PlayerPickaxe" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Pickaxe">
               <PropertyRef Name="PickaxeId" />
@@ -177,8 +209,8 @@ advertencia 6002: La tabla o vista 'MineClicker.dbo.PlayerGameBlock' no tiene de
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__PlayerPic__Playe__2C3393D0">
-          <End Type="Self.Player" Multiplicity="1" Role="Player" />
-          <End Type="Self.PlayerPickaxe" Multiplicity="*" Role="PlayerPickaxe" />
+          <End Role="Player" Type="Self.Player" Multiplicity="1" />
+          <End Role="PlayerPickaxe" Type="Self.PlayerPickaxe" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Player">
               <PropertyRef Name="PlayerId" />
@@ -190,6 +222,7 @@ advertencia 6002: La tabla o vista 'MineClicker.dbo.PlayerGameBlock' no tiene de
         </Association>
         <EntityContainer Name="MineClickerModelStoreContainer">
           <EntitySet Name="Block" EntityType="Self.Block" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FriendRequest" EntityType="Self.FriendRequest" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Game" EntityType="Self.Game" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Pickaxe" EntityType="Self.Pickaxe" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Player" EntityType="Self.Player" Schema="dbo" store:Type="Tables" />
@@ -203,41 +236,49 @@ advertencia 6002: La tabla o vista 'MineClicker.dbo.PlayerGameBlock' no tiene de
     [PlayerGameBlock].[Destroyed] AS [Destroyed]
     FROM [dbo].[PlayerGameBlock] AS [PlayerGameBlock]</DefiningQuery>
           </EntitySet>
+          <AssociationSet Name="FK__FriendReq__Playe__4D94879B" Association="Self.FK__FriendReq__Playe__4D94879B">
+            <End Role="Player" EntitySet="Player" />
+            <End Role="FriendRequest" EntitySet="FriendRequest" />
+          </AssociationSet>
+          <AssociationSet Name="FK__FriendReq__Playe__4E88ABD4" Association="Self.FK__FriendReq__Playe__4E88ABD4">
+            <End Role="Player" EntitySet="Player" />
+            <End Role="FriendRequest" EntitySet="FriendRequest" />
+          </AssociationSet>
           <AssociationSet Name="FK__Game__PlayerId__300424B4" Association="Self.FK__Game__PlayerId__300424B4">
-            <End EntitySet="Player" Role="Player" />
-            <End EntitySet="Game" Role="Game" />
+            <End Role="Player" EntitySet="Player" />
+            <End Role="Game" EntitySet="Game" />
           </AssociationSet>
           <AssociationSet Name="FK__PlayerFri__Playe__267ABA7A" Association="Self.FK__PlayerFri__Playe__267ABA7A">
-            <End EntitySet="Player" Role="Player" />
-            <End EntitySet="PlayerFriend" Role="PlayerFriend" />
+            <End Role="Player" EntitySet="Player" />
+            <End Role="PlayerFriend" EntitySet="PlayerFriend" />
           </AssociationSet>
           <AssociationSet Name="FK__PlayerFri__Playe__276EDEB3" Association="Self.FK__PlayerFri__Playe__276EDEB3">
-            <End EntitySet="Player" Role="Player" />
-            <End EntitySet="PlayerFriend" Role="PlayerFriend" />
+            <End Role="Player" EntitySet="Player" />
+            <End Role="PlayerFriend" EntitySet="PlayerFriend" />
           </AssociationSet>
           <AssociationSet Name="FK__PlayerGam__Block__38996AB5" Association="Self.FK__PlayerGam__Block__38996AB5">
-            <End EntitySet="Block" Role="Block" />
-            <End EntitySet="PlayerGameBlock" Role="PlayerGameBlock" />
+            <End Role="Block" EntitySet="Block" />
+            <End Role="PlayerGameBlock" EntitySet="PlayerGameBlock" />
           </AssociationSet>
           <AssociationSet Name="FK__PlayerGam__GameI__33D4B598" Association="Self.FK__PlayerGam__GameI__33D4B598">
-            <End EntitySet="Game" Role="Game" />
-            <End EntitySet="PlayerGame" Role="PlayerGame" />
+            <End Role="Game" EntitySet="Game" />
+            <End Role="PlayerGame" EntitySet="PlayerGame" />
           </AssociationSet>
           <AssociationSet Name="FK__PlayerGam__Playe__32E0915F" Association="Self.FK__PlayerGam__Playe__32E0915F">
-            <End EntitySet="Player" Role="Player" />
-            <End EntitySet="PlayerGame" Role="PlayerGame" />
+            <End Role="Player" EntitySet="Player" />
+            <End Role="PlayerGame" EntitySet="PlayerGame" />
           </AssociationSet>
           <AssociationSet Name="FK__PlayerGam__Playe__37A5467C" Association="Self.FK__PlayerGam__Playe__37A5467C">
-            <End EntitySet="PlayerGame" Role="PlayerGame" />
-            <End EntitySet="PlayerGameBlock" Role="PlayerGameBlock" />
+            <End Role="PlayerGame" EntitySet="PlayerGame" />
+            <End Role="PlayerGameBlock" EntitySet="PlayerGameBlock" />
           </AssociationSet>
           <AssociationSet Name="FK__PlayerPic__Picka__2D27B809" Association="Self.FK__PlayerPic__Picka__2D27B809">
-            <End EntitySet="Pickaxe" Role="Pickaxe" />
-            <End EntitySet="PlayerPickaxe" Role="PlayerPickaxe" />
+            <End Role="Pickaxe" EntitySet="Pickaxe" />
+            <End Role="PlayerPickaxe" EntitySet="PlayerPickaxe" />
           </AssociationSet>
           <AssociationSet Name="FK__PlayerPic__Playe__2C3393D0" Association="Self.FK__PlayerPic__Playe__2C3393D0">
-            <End EntitySet="Player" Role="Player" />
-            <End EntitySet="PlayerPickaxe" Role="PlayerPickaxe" />
+            <End Role="Player" EntitySet="Player" />
+            <End Role="PlayerPickaxe" EntitySet="PlayerPickaxe" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -255,6 +296,16 @@ advertencia 6002: La tabla o vista 'MineClicker.dbo.PlayerGameBlock' no tiene de
           <Property Name="Rarity" Type="Int32" Nullable="false" />
           <Property Name="Hardness" Type="Int32" Nullable="false" />
           <NavigationProperty Name="PlayerGameBlock" Relationship="Self.FK__PlayerGam__Block__38996AB5" FromRole="Block" ToRole="PlayerGameBlock" />
+        </EntityType>
+        <EntityType Name="FriendRequest">
+          <Key>
+            <PropertyRef Name="FriendRequestID" />
+          </Key>
+          <Property Name="FriendRequestID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PlayerSenderID" Type="Int32" Nullable="false" />
+          <Property Name="PlayerReceiverID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Player" Relationship="Self.FK__FriendReq__Playe__4D94879B" FromRole="FriendRequest" ToRole="Player" />
+          <NavigationProperty Name="Player1" Relationship="Self.FK__FriendReq__Playe__4E88ABD4" FromRole="FriendRequest" ToRole="Player" />
         </EntityType>
         <EntityType Name="Game">
           <Key>
@@ -286,6 +337,8 @@ advertencia 6002: La tabla o vista 'MineClicker.dbo.PlayerGameBlock' no tiene de
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Username" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Money" Type="Double" Nullable="false" />
+          <NavigationProperty Name="FriendRequest" Relationship="Self.FK__FriendReq__Playe__4D94879B" FromRole="Player" ToRole="FriendRequest" />
+          <NavigationProperty Name="FriendRequest1" Relationship="Self.FK__FriendReq__Playe__4E88ABD4" FromRole="Player" ToRole="FriendRequest" />
           <NavigationProperty Name="Game" Relationship="Self.FK__Game__PlayerId__300424B4" FromRole="Player" ToRole="Game" />
           <NavigationProperty Name="PlayerGame" Relationship="Self.FK__PlayerGam__Playe__32E0915F" FromRole="Player" ToRole="PlayerGame" />
           <NavigationProperty Name="Player1" Relationship="Self.PlayerFriend" FromRole="Player" ToRole="Player1" />
@@ -325,6 +378,30 @@ advertencia 6002: La tabla o vista 'MineClicker.dbo.PlayerGameBlock' no tiene de
             </Principal>
             <Dependent Role="PlayerGameBlock">
               <PropertyRef Name="BlockId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__FriendReq__Playe__4D94879B">
+          <End Role="Player" Type="Self.Player" Multiplicity="1" />
+          <End Role="FriendRequest" Type="Self.FriendRequest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="PlayerId" />
+            </Principal>
+            <Dependent Role="FriendRequest">
+              <PropertyRef Name="PlayerSenderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__FriendReq__Playe__4E88ABD4">
+          <End Role="Player" Type="Self.Player" Multiplicity="1" />
+          <End Role="FriendRequest" Type="Self.FriendRequest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="PlayerId" />
+            </Principal>
+            <Dependent Role="FriendRequest">
+              <PropertyRef Name="PlayerReceiverID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -386,6 +463,7 @@ advertencia 6002: La tabla o vista 'MineClicker.dbo.PlayerGameBlock' no tiene de
         </Association>
         <EntityContainer Name="MineClickerEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Block" EntityType="Self.Block" />
+          <EntitySet Name="FriendRequest" EntityType="Self.FriendRequest" />
           <EntitySet Name="Game" EntityType="Self.Game" />
           <EntitySet Name="Pickaxe" EntityType="Self.Pickaxe" />
           <EntitySet Name="Player" EntityType="Self.Player" />
@@ -394,6 +472,14 @@ advertencia 6002: La tabla o vista 'MineClicker.dbo.PlayerGameBlock' no tiene de
           <AssociationSet Name="FK__PlayerGam__Block__38996AB5" Association="Self.FK__PlayerGam__Block__38996AB5">
             <End Role="Block" EntitySet="Block" />
             <End Role="PlayerGameBlock" EntitySet="PlayerGameBlock" />
+          </AssociationSet>
+          <AssociationSet Name="FK__FriendReq__Playe__4D94879B" Association="Self.FK__FriendReq__Playe__4D94879B">
+            <End Role="Player" EntitySet="Player" />
+            <End Role="FriendRequest" EntitySet="FriendRequest" />
+          </AssociationSet>
+          <AssociationSet Name="FK__FriendReq__Playe__4E88ABD4" Association="Self.FK__FriendReq__Playe__4E88ABD4">
+            <End Role="Player" EntitySet="Player" />
+            <End Role="FriendRequest" EntitySet="FriendRequest" />
           </AssociationSet>
           <AssociationSet Name="FK__Game__PlayerId__300424B4" Association="Self.FK__Game__PlayerId__300424B4">
             <End Role="Player" EntitySet="Player" />
@@ -434,6 +520,15 @@ advertencia 6002: La tabla o vista 'MineClicker.dbo.PlayerGameBlock' no tiene de
                 <ScalarProperty Name="Value" ColumnName="Value" />
                 <ScalarProperty Name="Rarity" ColumnName="Rarity" />
                 <ScalarProperty Name="Hardness" ColumnName="Hardness" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FriendRequest">
+            <EntityTypeMapping TypeName="MineClickerModel.FriendRequest">
+              <MappingFragment StoreEntitySet="FriendRequest">
+                <ScalarProperty Name="FriendRequestID" ColumnName="FriendRequestID" />
+                <ScalarProperty Name="PlayerSenderID" ColumnName="PlayerSenderID" />
+                <ScalarProperty Name="PlayerReceiverID" ColumnName="PlayerReceiverID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

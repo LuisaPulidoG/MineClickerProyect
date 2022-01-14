@@ -50,6 +50,18 @@ namespace MineClicker.AccountServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/RegisterPlayer", ReplyAction="http://tempuri.org/IAccountService/RegisterPlayerResponse")]
         System.Threading.Tasks.Task RegisterPlayerAsync(WCFServices.Models.Player player);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/AttendFriendRequest", ReplyAction="http://tempuri.org/IAccountService/AttendFriendRequestResponse")]
+        void AttendFriendRequest(int friendRequestID, bool response);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/AttendFriendRequest", ReplyAction="http://tempuri.org/IAccountService/AttendFriendRequestResponse")]
+        System.Threading.Tasks.Task AttendFriendRequestAsync(int friendRequestID, bool response);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/SendFriendRequest", ReplyAction="http://tempuri.org/IAccountService/SendFriendRequestResponse")]
+        void SendFriendRequest(string username, int senderID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountService/SendFriendRequest", ReplyAction="http://tempuri.org/IAccountService/SendFriendRequestResponse")]
+        System.Threading.Tasks.Task SendFriendRequestAsync(string username, int senderID);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -125,6 +137,22 @@ namespace MineClicker.AccountServiceReference {
         
         public System.Threading.Tasks.Task RegisterPlayerAsync(WCFServices.Models.Player player) {
             return base.Channel.RegisterPlayerAsync(player);
+        }
+        
+        public void AttendFriendRequest(int friendRequestID, bool response) {
+            base.Channel.AttendFriendRequest(friendRequestID, response);
+        }
+        
+        public System.Threading.Tasks.Task AttendFriendRequestAsync(int friendRequestID, bool response) {
+            return base.Channel.AttendFriendRequestAsync(friendRequestID, response);
+        }
+        
+        public void SendFriendRequest(string username, int senderID) {
+            base.Channel.SendFriendRequest(username, senderID);
+        }
+        
+        public System.Threading.Tasks.Task SendFriendRequestAsync(string username, int senderID) {
+            return base.Channel.SendFriendRequestAsync(username, senderID);
         }
     }
 }

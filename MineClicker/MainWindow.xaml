@@ -64,7 +64,7 @@
                 <DropShadowEffect BlurRadius="12" Opacity="0.685"/>
             </Button.Effect>
         </Button>
-        <Button Content="{x:Static p:Resources.ChatButton}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="97" Height="48" BorderThickness="4,1,1,3" Background="#FFDDDDDD" RenderTransformOrigin="0.5,0.5" Margin="23,313,0,0" Click="ChatBtn" Padding="1" UseLayoutRounding="True" Focusable="False" SnapsToDevicePixels="True">
+        <Button Content="{x:Static p:Resources.FriendRequestButton}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="97" Height="48" BorderThickness="4,1,1,3" Background="#FFDDDDDD" RenderTransformOrigin="0.5,0.5" Margin="23,313,0,0" Click="ChatBtn" Padding="1" UseLayoutRounding="True" Focusable="False" SnapsToDevicePixels="True">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -95,9 +95,9 @@
         <Button Content="&lt;--" HorizontalAlignment="Left" Margin="587,360,0,0" VerticalAlignment="Top" Width="40" Height="40" FontSize="22" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontWeight="Bold" Click="ChangeLeftBtn" RenderTransformOrigin="-0.504,0.533"/>
         <Button Content="-->" HorizontalAlignment="Left" Margin="752,360,0,0" VerticalAlignment="Top" Width="40" Height="40" FontWeight="Bold" FontSize="22" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" Click="ChangeRightBtn" />
         <StackPanel x:Name="FriendsList" HorizontalAlignment="Left" Height="248" Margin="526,41,0,0" VerticalAlignment="Top" Orientation="Vertical" Width="226" Background="{x:Null}"/>
-        <ListBox x:Name="CajadeListaMensajes" HorizontalAlignment="Left" Height="313" Margin="145,41,0,0" VerticalAlignment="Top" Width="365"/>
-        <TextBox x:Name="CajadeTextoMensaje" HorizontalAlignment="Left" Height="35" Margin="145,358,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="323"/>
-        <Button Content="Enviar" HorizontalAlignment="Left" Margin="471,358,0,0" VerticalAlignment="Top" Width="39" Height="35" Foreground="White" BorderBrush="White" >
+        <StackPanel x:Name="MessagesStackPanel" HorizontalAlignment="Left" Height="313" Margin="145,41,0,0" VerticalAlignment="Top" Width="365" Background="White" Orientation="Vertical"/>
+        <TextBox x:Name="MessageTextBox" HorizontalAlignment="Left" Height="35" Margin="145,358,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="323" MaxLength="500"/>
+        <Button Content="Enviar" HorizontalAlignment="Left" Margin="471,358,0,0" VerticalAlignment="Top" Width="39" Height="35" Foreground="White" BorderBrush="White" Click="Button_Click" >
             <Button.Background>
                 <ImageBrush ImageSource="Sourse_Imagen/IconoEnviarMensaje.png"/>
             </Button.Background>

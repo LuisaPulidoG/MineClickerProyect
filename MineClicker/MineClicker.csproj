@@ -69,8 +69,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddFriendWindow.xaml.cs">
+      <DependentUpon>AddFriendWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ChatJugadores.xaml.cs">
       <DependentUpon>ChatJugadores.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ChatServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\CurrentGameServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -92,6 +100,8 @@
     </Compile>
     <Compile Include="EmailSender\EmailSenderSMTP.cs" />
     <Compile Include="Helpers\BlockHelper.cs" />
+    <Compile Include="Helpers\ChatCallbackHandler.cs" />
+    <Compile Include="Helpers\ChatHelper.cs" />
     <Compile Include="Helpers\CurrentGameCallbackHandler.cs" />
     <Compile Include="Multiplayer.xaml.cs">
       <DependentUpon>Multiplayer.xaml</DependentUpon>
@@ -142,6 +152,10 @@
     <Compile Include="WaitingGameWindow.xaml.cs">
       <DependentUpon>WaitingGameWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="AddFriendWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ChatJugadores.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -244,6 +258,13 @@
     <None Include="Connected Services\AccountServiceReference\WCFServices.Models.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\ChatServiceReference\service.wsdl" />
+    <None Include="Connected Services\ChatServiceReference\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ChatServiceReference\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\CurrentGameServiceReference\service.wsdl" />
     <None Include="Connected Services\CurrentGameServiceReference\service.xsd">
       <SubType>Designer</SubType>
@@ -323,6 +344,12 @@
     <None Include="Resources\DiamondBlock.png" />
     <None Include="Resources\PlatinumBlock.png" />
     <None Include="Resources\FluoriteBlock.png" />
+    <None Include="Connected Services\ChatServiceReference\configuration91.svcinfo" />
+    <None Include="Connected Services\ChatServiceReference\configuration.svcinfo" />
+    <None Include="Connected Services\ChatServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Sourse_Imagen\RomperBloquewav.wav" />
     <Resource Include="Sourse_Imagen\TexturaBotonChatGlobal.png" />
     <Resource Include="Sourse_Imagen\TexturaFondoInicioSesion.jpg" />
@@ -336,6 +363,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\AccountServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\ChatServiceReference\" />
     <WCFMetadataStorage Include="Connected Services\CurrentGameServiceReference\" />
     <WCFMetadataStorage Include="Connected Services\GameServiceReference\" />
   </ItemGroup>

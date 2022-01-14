@@ -22,5 +22,9 @@ namespace WCFServices {
         List<Player> GetFriends(int playerId);
         [OperationContract]
         void RegisterPlayer(Models.Player player);
+        [OperationContract]
+        void AttendFriendRequest(int friendRequestID, bool response);
+        [OperationContract]
+        void SendFriendRequest(string username, int senderID);
     }
 }
